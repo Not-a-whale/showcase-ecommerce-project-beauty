@@ -1,0 +1,110 @@
+[NX v22.7.2 Daemon Client] - 2026-05-15T14:18:30.595Z - [Client] Starting new daemon server in background
+[NX v22.7.2 Daemon Client] - 2026-05-15T14:18:30.608Z - [Client] Waiting for server (max: 6000 attempts, 10ms interval)
+[NX v22.7.2 Daemon Server] - 2026-05-15T14:18:31.653Z - Time taken for 'workspace context init' 1.588700000000017ms
+DEBUG nx::native::telemetry: Telemetry service initialized successfully
+[NX v22.7.2 Daemon Server] - 2026-05-15T14:18:32.158Z - New daemon starting from: C:\Projects\ecommerce\node_modules\nx\dist\src\daemon\server\server.js
+[NX v22.7.2 Daemon Server] - 2026-05-15T14:18:32.158Z - New daemon __dirname: C:\Projects\ecommerce\node_modules\nx\dist\src\daemon\server
+[NX v22.7.2 Daemon Server] - 2026-05-15T14:18:32.158Z - New daemon nxVersion: 22.7.2
+[NX v22.7.2 Daemon Server] - 2026-05-15T14:18:32.159Z - New daemon getInstalledNxVersion(): 22.7.2
+[NX v22.7.2 Daemon Server] - 2026-05-15T14:18:32.161Z - [Server] Starting outdated check interval (20ms)
+[NX v22.7.2 Daemon Server] - 2026-05-15T14:18:32.162Z - Started listening on: \\.\pipe\nx\C:\Users\sabao\AppData\Local\Temp\bff7634bd8a6951d6a3f\d.sock
+[NX v22.7.2 Daemon Server] - 2026-05-15T14:18:32.164Z - [WATCHER]: Subscribed to changes within: C:\Projects\ecommerce\download (native)
+[NX v22.7.2 Daemon Server] - 2026-05-15T14:18:32.164Z - [LATEST-NX]: Pulling latest Nx...
+[NX v22.7.2 Daemon Client] - 2026-05-15T14:18:32.172Z - [Client] Server available
+[NX v22.7.2 Daemon Client] - 2026-05-15T14:18:32.172Z - [Client] Daemon server started, pid=63672
+[NX v22.7.2 Daemon Server] - 2026-05-15T14:18:32.174Z - [AI-AGENTS]: Starting agent configuration status computation
+[NX v22.7.2 Daemon Client] - 2026-05-15T14:18:32.174Z - [Messenger] Setting up socket listeners
+[NX v22.7.2 Daemon Server] - 2026-05-15T14:18:32.175Z - Established a connection. Number of open connections: 1
+[NX v22.7.2 Daemon Client] - 2026-05-15T14:18:32.174Z - [Messenger] listen() complete
+[NX v22.7.2 Daemon Server] - 2026-05-15T14:18:32.175Z - Established a connection. Number of open connections: 2
+[NX v22.7.2 Daemon Server] - 2026-05-15T14:18:32.175Z - Closed a connection. Number of open connections: 1
+[isolated-plugin] spawned worker for "C:\Projects\ecommerce\node_modules\nx\dist\src\plugins\js" (pid: 74812, socket: \\.\pipe\nx\C:\Users\sabao\AppData\Local\Temp\plugin63672-0-1639.9.sock)
+[isolated-plugin] spawned worker for "C:\Projects\ecommerce\node_modules\nx\dist\src\plugins\package-json" (pid: 54600, socket: \\.\pipe\nx\C:\Users\sabao\AppData\Local\Temp\plugin63672-1-1651.0522.sock)
+[isolated-plugin] spawned worker for "C:\Projects\ecommerce\node_modules\nx\dist\src\plugins\project-json\build-nodes\project-json" (pid: 60344, socket: \\.\pipe\nx\C:\Users\sabao\AppData\Local\Temp\plugin63672-2-1663.1974.sock)
+[NX v22.7.2 Daemon Server] - 2026-05-15T14:18:32.306Z - Time taken for 'loadSpecifiedNxPlugins' 36.4396999999999ms
+[NX v22.7.2 Daemon Client] - 2026-05-15T14:18:32.403Z - [Messenger] Sending message type: REQUEST_PROJECT_GRAPH
+[NX v22.7.2 Daemon Client] - 2026-05-15T14:18:32.404Z - [Messenger] Message sent
+[NX v22.7.2 Daemon Server] - 2026-05-15T14:18:32.406Z - Received raw message of length 4262
+[NX v22.7.2 Daemon Server] - 2026-05-15T14:18:32.407Z - Received json message of type REQUEST_PROJECT_GRAPH
+[NX v22.7.2 Daemon Server] - 2026-05-15T14:18:32.407Z - [REQUEST]: Client Request for Project Graph Received
+[plugin-worker] "C:\Projects\ecommerce\node_modules\nx\dist\src\plugins\package-json" (pid: 54600) listening on \\.\pipe\nx\C:\Users\sabao\AppData\Local\Temp\plugin63672-1-1651.0522.sock
+[1m[33mTime taken for 'plugin worker 54600 code loading' 335.6797ms[39m[22m
+[plugin-worker] "C:\Projects\ecommerce\node_modules\nx\dist\src\plugins\project-json\build-nodes\project-json" (pid: 60344) listening on \\.\pipe\nx\C:\Users\sabao\AppData\Local\Temp\plugin63672-2-1663.1974.sock
+[1m[33mTime taken for 'plugin worker 60344 code loading' 329.20419999999996ms[39m[22m
+[isolated-plugin] connected to worker for "C:\Projects\ecommerce\node_modules\nx\dist\src\plugins\project-json\build-nodes\project-json" (pid: 60344)
+[isolated-plugin] connected to worker for "C:\Projects\ecommerce\node_modules\nx\dist\src\plugins\package-json" (pid: 54600)
+[plugin-worker] "C:\Projects\ecommerce\node_modules\nx\dist\src\plugins\project-json\build-nodes\project-json" (pid: 60344) connected
+[plugin-worker] "C:\Projects\ecommerce\node_modules\nx\dist\src\plugins\package-json" (pid: 54600) connected
+[NX v22.7.2 Daemon Server] - 2026-05-15T14:18:32.690Z - Time taken for 'start-plugin-worker:C:\Projects\ecommerce\node_modules\nx\dist\src\plugins\package-json' 407.77250000000004ms
+[NX v22.7.2 Daemon Server] - 2026-05-15T14:18:32.690Z - Time taken for 'start-plugin-worker:C:\Projects\ecommerce\node_modules\nx\dist\src\plugins\project-json\build-nodes\project-json' 394.39519999999993ms
+[plugin-worker] "C:\Projects\ecommerce\node_modules\nx\dist\src\plugins\project-json\build-nodes\project-json" (pid: 60344) loaded successfully
+[NX v22.7.2 Daemon Server] - 2026-05-15T14:18:32.775Z - Time taken for 'Load Nx Plugin: C:\Projects\ecommerce\node_modules\nx\dist\src\plugins\project-json\build-nodes\project-json' 506.13519999999994ms
+[plugin-worker] "C:\Projects\ecommerce\node_modules\nx\dist\src\plugins\package-json" (pid: 54600) loaded successfully
+[NX v22.7.2 Daemon Server] - 2026-05-15T14:18:32.778Z - Time taken for 'Load Nx Plugin: C:\Projects\ecommerce\node_modules\nx\dist\src\plugins\package-json' 509.0124999999998ms
+[plugin-worker] "C:\Projects\ecommerce\node_modules\nx\dist\src\plugins\js" (pid: 74812) listening on \\.\pipe\nx\C:\Users\sabao\AppData\Local\Temp\plugin63672-0-1639.9.sock
+[1m[33mTime taken for 'plugin worker 74812 code loading' 1141.5573ms[39m[22m
+[isolated-plugin] connected to worker for "C:\Projects\ecommerce\node_modules\nx\dist\src\plugins\js" (pid: 74812)
+[NX v22.7.2 Daemon Server] - 2026-05-15T14:18:33.487Z - Time taken for 'start-plugin-worker:C:\Projects\ecommerce\node_modules\nx\dist\src\plugins\js' 1215.7624ms
+[plugin-worker] "C:\Projects\ecommerce\node_modules\nx\dist\src\plugins\js" (pid: 74812) connected
+[plugin-worker] "C:\Projects\ecommerce\node_modules\nx\dist\src\plugins\js" (pid: 74812) loaded successfully
+[NX v22.7.2 Daemon Server] - 2026-05-15T14:18:33.570Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX v22.7.2 Daemon Server] - 2026-05-15T14:18:33.570Z - [REQUEST]: 
+[NX v22.7.2 Daemon Server] - 2026-05-15T14:18:33.570Z - [REQUEST]: 
+[NX v22.7.2 Daemon Server] - 2026-05-15T14:18:33.572Z - Reusing in-memory cached project graph because no files changed.
+[NX v22.7.2 Daemon Server] - 2026-05-15T14:18:33.572Z - Streaming message to client: progress update for topic graph-construction
+[NX v22.7.2 Daemon Client] - 2026-05-15T14:18:33.572Z - [Messenger] Received message, length: 47
+[NX v22.7.2 Daemon Server] - 2026-05-15T14:18:33.574Z - Time taken for 'loadDefaultNxPlugins' 1302.3959999999997ms
+[NX v22.7.2 Daemon Server] - 2026-05-15T14:18:33.574Z - Time taken for 'Load Nx Plugin: C:\Projects\ecommerce\node_modules\nx\dist\src\plugins\js' 1302.1846000000003ms
+[NX v22.7.2 Daemon Server] - 2026-05-15T14:18:33.574Z - Time taken for 'hash changed files from watcher' 0.09799999999995634ms
+[1m[33mTime taken for 'nx/core/project-json:createNodes' 0.14200000000005275ms[39m[22m
+[1m[33mTime taken for 'nx/core/package-json:createNodes' 0.7480000000000473ms[39m[22m
+[isolated-plugin] shutting down worker for "nx/core/package-json" after createNodes
+[NX v22.7.2 Daemon Server] - 2026-05-15T14:18:33.577Z - Streaming message to client: progress update for topic graph-construction
+[isolated-plugin] shutting down worker for "nx/core/project-json" after createNodes
+[NX v22.7.2 Daemon Server] - 2026-05-15T14:18:33.577Z - Streaming message to client: progress update for topic graph-construction
+[NX v22.7.2 Daemon Client] - 2026-05-15T14:18:33.577Z - [Messenger] Received message, length: 153
+[NX v22.7.2 Daemon Client] - 2026-05-15T14:18:33.578Z - [Messenger] Received message, length: 112
+[1m[33mTime taken for 'nx/js/dependencies-and-lockfile:createNodes' 0.12349999999992178ms[39m[22m
+[NX v22.7.2 Daemon Server] - 2026-05-15T14:18:33.908Z - Streaming message to client: progress update for topic graph-construction
+[NX v22.7.2 Daemon Client] - 2026-05-15T14:18:33.908Z - [Messenger] Received message, length: 47
+[NX v22.7.2 Daemon Server] - 2026-05-15T14:18:33.919Z - Streaming message to client: progress update for topic graph-construction
+[NX v22.7.2 Daemon Server] - 2026-05-15T14:18:33.919Z - Time taken for 'build-project-configs' 337.4562000000001ms
+[NX v22.7.2 Daemon Server] - 2026-05-15T14:18:33.919Z - Time taken for 'createNodes:merge' 0.1811000000002423ms
+[NX v22.7.2 Daemon Server] - 2026-05-15T14:18:33.919Z - Time taken for 'native-file-deps' 0.005000000000109139ms
+[NX v22.7.2 Daemon Server] - 2026-05-15T14:18:33.919Z - Time taken for 'get-workspace-files' 0.5484000000001288ms
+[NX v22.7.2 Daemon Server] - 2026-05-15T14:18:33.919Z - Time taken for 'get-all-workspace-files' 5.660000000000309ms
+[NX v22.7.2 Daemon Server] - 2026-05-15T14:18:33.919Z - Time taken for 'read cache' 0.18990000000030705ms
+[NX v22.7.2 Daemon Client] - 2026-05-15T14:18:33.919Z - [Messenger] Received message, length: 47
+[1m[33mTime taken for 'build typescript dependencies' 0.2136000000000422ms[39m[22m
+[isolated-plugin] shutting down worker for "nx/js/dependencies-and-lockfile" after createDependencies
+[NX v22.7.2 Daemon Server] - 2026-05-15T14:18:33.922Z - Streaming message to client: progress update for topic graph-construction
+[NX v22.7.2 Daemon Client] - 2026-05-15T14:18:33.922Z - [Messenger] Received message, length: 47
+[NX v22.7.2 Daemon Server] - 2026-05-15T14:18:33.923Z - [SYNC]: collect registered sync generators
+[NX v22.7.2 Daemon Server] - 2026-05-15T14:18:33.928Z - Wrote project graph cache to C:\Projects\ecommerce\download\.nx\workspace-data\project-graph.json
+[NX v22.7.2 Daemon Server] - 2026-05-15T14:18:33.928Z - Serializing response for REQUEST_PROJECT_GRAPH message in json mode
+[NX v22.7.2 Daemon Server] - 2026-05-15T14:18:33.928Z - Responding to REQUEST_PROJECT_GRAPH message
+[NX v22.7.2 Daemon Server] - 2026-05-15T14:18:33.928Z - [REQUEST]: Responding to the client. project-graph
+[NX v22.7.2 Daemon Server] - 2026-05-15T14:18:33.928Z - Time taken for 'total for creating and serializing project graph' 1521.2082999999998ms
+[NX v22.7.2 Daemon Server] - 2026-05-15T14:18:33.929Z - Time taken for 'total execution time for createProjectGraph()' 6.580400000000282ms
+[NX v22.7.2 Daemon Server] - 2026-05-15T14:18:33.929Z - Time taken for 'createDependencies' 3.755300000000261ms
+[NX v22.7.2 Daemon Server] - 2026-05-15T14:18:33.929Z - Time taken for 'nx/js/dependencies-and-lockfile:createDependencies' 3.457100000000082ms
+[NX v22.7.2 Daemon Server] - 2026-05-15T14:18:33.929Z - Time taken for 'createMetadata' 0.012299999999868305ms
+[NX v22.7.2 Daemon Server] - 2026-05-15T14:18:33.929Z - Time taken for 'serialize graph' 0.002599999999802094ms
+[NX v22.7.2 Daemon Server] - 2026-05-15T14:18:33.929Z - Time taken for 'write cache' 4.494299999999839ms
+[NX v22.7.2 Daemon Server] - 2026-05-15T14:18:33.929Z - Done responding to the client project-graph
+[NX v22.7.2 Daemon Server] - 2026-05-15T14:18:33.929Z - Handled json message REQUEST_PROJECT_GRAPH. Handling time: 1521. Response time: 1.
+[NX v22.7.2 Daemon Client] - 2026-05-15T14:18:33.929Z - [Messenger] Received message, length: 118
+Fetching nx...
+DEBUG nx::native::telemetry::service: Sent 1 events: [nx/js/dependencies-and-lockfile:createDe]
+[NX v22.7.2 Daemon Server] - 2026-05-15T14:18:34.266Z - Closed a connection. Number of open connections: 0
+[NX v22.7.2 Daemon Server] - 2026-05-15T14:18:38.802Z - [LATEST-NX]: Successfully pulled latest Nx to C:\Users\sabao\AppData\Local\Temp\tmp-63672-KkWdvOeq7gGq
+[NX v22.7.2 Daemon Server] - 2026-05-15T14:18:38.804Z - [NX-CONSOLE]: Using local implementation (NX_USE_LOCAL=true or inner call)
+DEBUG nx::native::ide::install: Detected editor: Unknown
+[NX v22.7.2 Daemon Server] - 2026-05-15T14:18:38.804Z - [AI-AGENTS]: Failed to compute agent configuration status from latest Nx. Error: Only URLs with a scheme in: file, data, and node are supported by the default ESM loader. On Windows, absolute paths must be valid file:// URLs. Received protocol 'c:'
+[NX v22.7.2 Daemon Server] - 2026-05-15T14:18:38.804Z - [AI-AGENTS]: Agent configuration status computation completed: 0 fully configured, 0 outdated, 0 partially configured, 0 non-configured
+[NX v22.7.2 Daemon Server] - 2026-05-15T14:18:38.804Z - [NX-CONSOLE]: Console status check completed, shouldPrompt: false
+[NX v22.7.2 Daemon Server] - 2026-05-15T17:18:32.410Z - [WATCHER]: Stopping the watcher for C:\Projects\ecommerce\download (sources)
+[NX v22.7.2 Daemon Server] - 2026-05-15T17:18:32.411Z - [WATCHER]: Stopping the watcher for C:\Projects\ecommerce\download (outputs)
+[NX v22.7.2 Daemon Server] - 2026-05-15T17:18:32.413Z - [LATEST-NX]: Cleaning up latest Nx installation from C:\Users\sabao\AppData\Local\Temp\tmp-63672-KkWdvOeq7gGq
+[NX v22.7.2 Daemon Server] - 2026-05-15T17:18:32.415Z - Server stopped because: "10800000ms of inactivity"
+Failed to flush telemetry: Flush reply channel closed

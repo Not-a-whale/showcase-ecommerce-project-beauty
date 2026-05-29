@@ -1,0 +1,176 @@
+{
+  "version": "6.0",
+  "nxVersion": "22.7.2",
+  "pathMappings": {
+    "@ecommerce/shared-types": [
+      "libs/shared-types/src/index.ts"
+    ]
+  },
+  "nxJsonPlugins": [],
+  "fileMap": {
+    "nonProjectFiles": [
+      {
+        "file": ".env.example",
+        "hash": "5070576140131074839"
+      },
+      {
+        "file": "apps/api/src/auth/dto/auth.dto.ts",
+        "hash": "2850993036860789889"
+      },
+      {
+        "file": "apps/api/src/auth/entities/user.entity.ts",
+        "hash": "4552684773898997635"
+      },
+      {
+        "file": "apps/api/src/auth/strategies/jwt-refresh.strategy.ts",
+        "hash": "13170783681998433655"
+      },
+      {
+        "file": "apps/api/src/auth/strategies/jwt.strategy.ts",
+        "hash": "14591146449625009512"
+      },
+      {
+        "file": "apps/api/src/common/decorators/current-user.decorator.ts",
+        "hash": "1941269666758502312"
+      },
+      {
+        "file": "apps/api/src/common/decorators/index.ts",
+        "hash": "8265536272540598882"
+      },
+      {
+        "file": "apps/api/src/common/decorators/public.decorator.ts",
+        "hash": "17960535925631508594"
+      },
+      {
+        "file": "apps/api/src/common/decorators/roles.decorator.ts",
+        "hash": "15939957453886755829"
+      },
+      {
+        "file": "apps/api/src/common/filters/http-exception.filter.ts",
+        "hash": "2985394035690672766"
+      },
+      {
+        "file": "apps/api/src/common/guards/index.ts",
+        "hash": "7152591550310243125"
+      },
+      {
+        "file": "apps/api/src/common/guards/jwt-auth.guard.ts",
+        "hash": "13127040717647647424"
+      },
+      {
+        "file": "apps/api/src/common/guards/roles.guard.ts",
+        "hash": "4684305098653210130"
+      },
+      {
+        "file": "apps/api/src/main.ts",
+        "hash": "16418155395871487538"
+      },
+      {
+        "file": "apps/api/src/notifications/entities/notification.entity.ts",
+        "hash": "15274051105383708884"
+      },
+      {
+        "file": "apps/api/src/orders/dto/gift-card.dto.ts",
+        "hash": "9271348483412635721"
+      },
+      {
+        "file": "apps/api/src/orders/dto/order.dto.ts",
+        "hash": "2054769007389987826"
+      },
+      {
+        "file": "apps/api/src/orders/dto/promo-code.dto.ts",
+        "hash": "13360376263925338041"
+      },
+      {
+        "file": "apps/api/src/orders/entities/gift-card.entity.ts",
+        "hash": "5042410059219514675"
+      },
+      {
+        "file": "apps/api/src/orders/entities/order-item.entity.ts",
+        "hash": "10345802791132054719"
+      },
+      {
+        "file": "apps/api/src/orders/entities/order.entity.ts",
+        "hash": "13346924417980416225"
+      },
+      {
+        "file": "apps/api/src/orders/entities/promo-code.entity.ts",
+        "hash": "18086510598437191809"
+      },
+      {
+        "file": "apps/api/src/products/dto/product.dto.ts",
+        "hash": "9736221330096891402"
+      },
+      {
+        "file": "apps/api/src/products/entities/category.entity.ts",
+        "hash": "16746497966808865904"
+      },
+      {
+        "file": "apps/api/src/products/entities/product.entity.ts",
+        "hash": "14833060277463540725"
+      },
+      {
+        "file": "apps/api/src/redis/redis.module.ts",
+        "hash": "2960121496123144592"
+      },
+      {
+        "file": "apps/api/src/redis/redis.service.ts",
+        "hash": "10338008427313611586"
+      },
+      {
+        "file": "apps/api/src/wishlist/entities/wishlist.entity.ts",
+        "hash": "18212356896297340353"
+      },
+      {
+        "file": "apps/payment/src/entities/payment.entity.ts",
+        "hash": "4836447857878143903"
+      },
+      {
+        "file": "docker-compose.yml",
+        "hash": "7228228832448209856"
+      },
+      {
+        "file": "libs/shared-types/src/auth.types.ts",
+        "hash": "5925748480860208205"
+      },
+      {
+        "file": "libs/shared-types/src/common.types.ts",
+        "hash": "17148530249853157096"
+      },
+      {
+        "file": "libs/shared-types/src/index.ts",
+        "hash": "941509638126098959"
+      },
+      {
+        "file": "libs/shared-types/src/order.types.ts",
+        "hash": "7324371418910266770"
+      },
+      {
+        "file": "libs/shared-types/src/payment.types.ts",
+        "hash": "3579367679257113261"
+      },
+      {
+        "file": "libs/shared-types/src/product.types.ts",
+        "hash": "4067250860311225172"
+      },
+      {
+        "file": "nx.json",
+        "hash": "17497793409737138162"
+      },
+      {
+        "file": "package.json",
+        "hash": "14751226479043033117"
+      },
+      {
+        "file": "tools/db/seeds/seed.ts",
+        "hash": "6789311415127616344"
+      },
+      {
+        "file": "tsconfig.base.json",
+        "hash": "3248312322740852821"
+      }
+    ],
+    "projectFileMap": {}
+  },
+  "externalNodesHash": "3244421341483603138"
+}
