@@ -1,8 +1,11 @@
 {
   "compilerOptions": {
+    "baseUrl": ".",
     "composite": true,
     "declarationMap": true,
     "emitDeclarationOnly": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
     "importHelpers": true,
     "isolatedModules": true,
     "lib": ["es2022"],
@@ -15,7 +18,11 @@
     "noUnusedLocals": true,
     "skipLibCheck": true,
     "strict": true,
+    "strictPropertyInitialization": false,
     "target": "es2022",
-    "customConditions": ["@ecommerce/source"]
+    "customConditions": ["@ecommerce/source"],
+    "paths": {
+      "@ecommerce/shared-types": ["libs/shared-types/src/index.ts"]
+    }
   }
 }

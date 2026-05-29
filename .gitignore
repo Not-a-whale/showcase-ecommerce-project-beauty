@@ -42,3 +42,11 @@ Thumbs.db
 .nx/workspace-data
 .claude/worktrees
 .claude/settings.local.json
+
+# Next.js
+.next
+out
+
+test-output
+
+vitest.config.*.timestamp*
