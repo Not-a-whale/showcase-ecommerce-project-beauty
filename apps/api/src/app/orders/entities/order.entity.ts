@@ -42,10 +42,10 @@ export class Order {
   @Column({ type: 'decimal', precision: 10, scale: 2 })
   stripeChargeAmount: number; // totalAmount - discountAmount - giftCardAmountUsed
 
-  @Column({ length: 50, nullable: true })
+  @Column({ type: 'varchar', length: 50, nullable: true })
   promoCodeUsed: string | null;
 
-  @Column({ length: 20, nullable: true })
+  @Column({ type: 'varchar', length: 20, nullable: true })
   giftCardCodeUsed: string | null;
 
   @Column({ type: 'jsonb' })

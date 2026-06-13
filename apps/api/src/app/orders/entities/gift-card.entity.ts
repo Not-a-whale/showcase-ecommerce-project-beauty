@@ -23,13 +23,13 @@ export class GiftCard {
   @Column({ type: 'decimal', precision: 10, scale: 2 })
   remainingAmount: number;
 
-  @Column({ nullable: true })
+  @Column({ type: 'uuid', nullable: true })
   purchasedByUserId: string | null;
 
-  @Column({ nullable: true })
+  @Column({ type: 'uuid', nullable: true })
   redeemedByUserId: string | null;
 
-  @Column({ nullable: true })
+  @Column({ type: 'uuid', nullable: true })
   usedInOrderId: string | null;
 
   @Column({ default: true })

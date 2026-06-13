@@ -1,5 +1,5 @@
-import { NestFactory } from '@nestjs/core';
-import { ValidationPipe } from '@nestjs/common';
+import { NestFactory, Reflector } from '@nestjs/core';
+import { ClassSerializerInterceptor, ValidationPipe } from '@nestjs/common';
 import { SwaggerModule, DocumentBuilder } from '@nestjs/swagger';
 import { AppModule } from './app/app.module';
 import { HttpExceptionFilter } from './app/common/filters/http-exception.filter';
@@ -29,12 +29,18 @@ async function bootstrap() {
   // Global validation pipe
   app.useGlobalPipes(
     new ValidationPipe({
-      whitelist: true,          // Strip unknown properties
+      whitelist: true, // Strip unknown properties
       forbidNonWhitelisted: true, // Throw on unknown properties
-      transform: true,          // Auto-transform types
+      transform: true, // Auto-transform types
       transformOptions: {
         enableImplicitConversion: true,
       },
+    }),
+  );
+
+  app.useGlobalInterceptors(
+    new ClassSerializerInterceptor(app.get(Reflector), {
+      excludeExtraneousValues: true,
     }),
   );
 

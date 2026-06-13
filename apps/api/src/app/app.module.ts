@@ -10,9 +10,13 @@ import { RedisModule } from './redis/redis.module';
 import { AdminModule } from './admin/admin.module';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { dataSourceOptions } from './common/data-source';
+import { ConfigModule } from '@nestjs/config';
 
 @Module({
   imports: [
+    ConfigModule.forRoot({
+      isGlobal: true,
+    }),
     RedisModule,
     AuthModule,
     ProductsModule,

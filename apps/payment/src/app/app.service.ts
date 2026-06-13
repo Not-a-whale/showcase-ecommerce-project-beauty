@@ -9,7 +9,7 @@ export class AppService {
 
   getHealth(): HealthCheckResponse {
     return {
-      status: 'okiiiiii',
+      status: 'ok',
       service: 'payment',
       timestamp: new Date().toISOString(),
     };
