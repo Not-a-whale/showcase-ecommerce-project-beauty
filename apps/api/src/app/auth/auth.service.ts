@@ -224,8 +224,7 @@ export class AuthService {
     await this.redisService.set(`tv:${userId}`, String(user.tokenVersion), 900);
     // 6. (опционально) выдать новую пару токенов с новым tokenVersion
     //    + setRefreshCookie
-    const { refreshToken } = await this.generateTokenPair(user);
-    this.setRefreshCookie(response, refreshToken);
+    response.clearCookie('refreshToken');
     // 7. вернуть новую пару ИЛИ просто { success: true }
     return { success: true };
   }
