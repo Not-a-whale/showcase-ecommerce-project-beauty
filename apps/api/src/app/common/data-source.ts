@@ -27,6 +27,6 @@ export const dataSourceOptions: DataSourceOptions = {
     Notification,
     Wishlist,
   ],
-  synchronize: process.env.NODE_ENV !== 'production',
+  synchronize: false, // schema is managed exclusively via migrations — run: npm run migration:run
   logging: true,
 };

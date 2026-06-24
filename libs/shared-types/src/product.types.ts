@@ -22,10 +22,15 @@ export interface Category {
   slug: string;
 }
 
-export type SortType = 'price_asc' | 'price_desc' | 'newest' | 'oldest' | 'popular';
+export type SortType =
+  | 'price_asc'
+  | 'price_desc'
+  | 'newest'
+  | 'oldest'
+  | 'popular';
 
 export interface ProductsQuery {
-  category: string;
+  categoryId?: string;
   sort?: SortType;
   search?: string;
   cursor?: string;
@@ -55,5 +60,3 @@ export interface UpdateProductRequest {
   saleStartsAt?: string | null;
   saleEndsAt?: string | null;
 }
-
-

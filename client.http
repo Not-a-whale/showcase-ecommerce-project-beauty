@@ -1,0 +1,255 @@
+@host = http://localhost:3000/api
+
+### ========================================
+### AUTH — логин под разными ролями
+### accessToken сохраняется автоматически
+### ========================================
+
+### Login ADMIN
+POST {{host}}/auth/login
+Content-Type: application/json
+
+{
+  "email": "admin@test.com",
+  "password": "password123"
+}
+
+> {%
+  client.global.set("adminToken", response.body.accessToken);
+%}
+
+### Login MANAGER
+POST {{host}}/auth/login
+Content-Type: application/json
+
+{
+  "email": "manager@test.com",
+  "password": "password123"
+}
+
+> {%
+  client.global.set("managerToken", response.body.accessToken);
+%}
+
+### Login USER
+POST {{host}}/auth/login
+Content-Type: application/json
+
+{
+  "email": "user@test.com",
+  "password": "password123"
+}
+
+> {%
+  client.global.set("userToken", response.body.accessToken);
+%}
+
+
+### ========================================
+### CRUD + RBAC
+### ========================================
+
+### Список товаров (публично) — сохрани какой-нибудь id и categoryId руками из ответа
+GET {{host}}/products
+
+### Один товар по id (публично) — подставь реальный uuid
+GET {{host}}/products/03fce43b-63bc-44d9-9a18-80b7ae748ddd
+
+### Один товар — несуществующий uuid → 404
+GET {{host}}/products/00000000-0000-0000-0000-000000000000
+
+### Один товар — не-uuid → 400
+GET {{host}}/products/not-a-uuid
+
+### Создать товар — БЕЗ токена → 401
+POST {{host}}/products
+Content-Type: application/json
+
+{
+  "name": "No Auth Product",
+  "description": "should fail",
+  "price": 10,
+  "stock": 5,
+  "categoryId": "PASTE_CATEGORY_ID"
+}
+
+### Создать товар — USER → 403
+POST {{host}}/products
+Content-Type: application/json
+Authorization: Bearer {{userToken}}
+
+{
+  "name": "User Product",
+  "description": "should fail with 403",
+  "price": 10,
+  "stock": 5,
+  "categoryId": "PASTE_CATEGORY_ID"
+}
+
+### Создать товар — MANAGER → 201
+POST {{host}}/products
+Content-Type: application/json
+Authorization: Bearer {{managerToken}}
+
+{
+  "name": "Manager Product",
+  "description": "created by manager",
+  "price": 49.99,
+  "stock": 30,
+  "categoryId": "PASTE_CATEGORY_ID"
+}
+
+### Создать товар — ADMIN → 201 (сохрани id из ответа для update/delete)
+POST {{host}}/products
+Content-Type: application/json
+Authorization: Bearer {{adminToken}}
+
+{
+  "name": "Admin Product",
+  "description": "created by admin",
+  "price": 59.99,
+  "stock": 20,
+  "categoryId": "PASTE_CATEGORY_ID"
+}
+
+> {%
+  client.global.set("createdProductId", response.body.id);
+%}
+
+### Создать товар — несуществующий categoryId → 400 "Category not found"
+POST {{host}}/products
+Content-Type: application/json
+Authorization: Bearer {{adminToken}}
+
+{
+  "name": "Bad Category Product",
+  "description": "fk violation",
+  "price": 10,
+  "stock": 5,
+  "categoryId": "11111111-1111-1111-1111-111111111111"
+}
+
+### Обновить товар — ADMIN → 200
+PATCH {{host}}/products/{{createdProductId}}
+Content-Type: application/json
+Authorization: Bearer {{adminToken}}
+
+{
+  "price": 39.99
+}
+
+### Удалить товар — MANAGER → 403 (только ADMIN)
+DELETE {{host}}/products/{{createdProductId}}
+Authorization: Bearer {{managerToken}}
+
+### Удалить товар — ADMIN → 200
+DELETE {{host}}/products/{{createdProductId}}
+Authorization: Bearer {{adminToken}}
+
+### Проверка soft-delete — тот же товар теперь → 404
+GET {{host}}/products/{{createdProductId}}
+
+
+### ========================================
+### СОРТИРОВКА
+### ========================================
+
+### По умолчанию (newest)
+GET {{host}}/products?limit=10
+
+### Цена по возрастанию — проверь численный порядок (9, 50, 100), не лексикографический
+GET {{host}}/products?sort=price_asc&limit=20
+
+### Цена по убыванию
+GET {{host}}/products?sort=price_desc&limit=10
+
+### Самые новые
+GET {{host}}/products?sort=newest&limit=10
+
+### Самые старые
+GET {{host}}/products?sort=oldest&limit=10
+
+### Популярные (purchaseCount)
+GET {{host}}/products?sort=popular&limit=10
+
+### Невалидный sort → 400
+GET {{host}}/products?sort=banana
+
+
+### ========================================
+### ФИЛЬТР ПО КАТЕГОРИИ
+### ========================================
+
+### Только товары категории — подставь реальный categoryId
+GET {{host}}/products?categoryId=PASTE_CATEGORY_ID
+
+### Несуществующая категория → пустой массив (не ошибка)
+GET {{host}}/products?categoryId=22222222-2222-2222-2222-222222222222
+
+### Не-uuid categoryId → 400
+GET {{host}}/products?categoryId=abc
+
+### Фильтр + сортировка вместе
+GET {{host}}/products?categoryId=PASTE_CATEGORY_ID&sort=price_asc&limit=10
+
+
+### ========================================
+### CURSOR PAGINATION
+### ========================================
+
+### Страница 1 — возьми nextCursor из ответа, вставь в следующий запрос
+GET {{host}}/products?sort=price_asc&limit=5
+
+### Страница 2 — вставь nextCursor из страницы 1
+GET {{host}}/products?sort=price_asc&limit=5&cursor=PASTE_NEXT_CURSOR
+
+### Страница 3 — вставь nextCursor из страницы 2
+GET {{host}}/products?sort=price_asc&limit=5&cursor=PASTE_NEXT_CURSOR
+
+### Tie-breaker тест — товары с ценой 50.00 на границах страниц
+### Листай по 2, проверь что Identical Price Item не теряются и не дублируются
+GET {{host}}/products?sort=price_asc&limit=2
+
+### Tie-breaker страница 2
+GET {{host}}/products?sort=price_asc&limit=2&cursor=PASTE_NEXT_CURSOR
+
+### Tie-breaker страница 3
+GET {{host}}/products?sort=price_asc&limit=2&cursor=PASTE_NEXT_CURSOR
+
+### Битый курсор → 400 "Invalid cursor"
+GET {{host}}/products?cursor=garbage123
+
+
+### ========================================
+### FULL-TEXT SEARCH
+### ========================================
+
+### Поиск по name
+GET {{host}}/products?search=tee
+
+### Поиск по description
+GET {{host}}/products?search=cotton
+
+### Регистронезависимость
+GET {{host}}/products?search=TEE
+
+### Конкретный товар
+GET {{host}}/products?search=vintage
+
+### Слово из разных описаний (leather)
+GET {{host}}/products?search=leather
+
+### Два слова — AND (оба должны присутствовать)
+GET {{host}}/products?search=wool overcoat
+
+### Стемминг — "dresses" должно находить "dress"
+GET {{host}}/products?search=dresses
+
+### Ничего не найдено → пустой массив, не ошибка
+GET {{host}}/products?search=xyznonexistent
+
+### Поиск + сортировка
+GET {{host}}/products?search=tee&sort=price_asc
+
+### Поиск + фильтр + сортировка + лимит (всё вместе)
+GET {{host}}/products?search=dress&categoryId=PASTE_CATEGORY_ID&sort=price_asc&limit=5

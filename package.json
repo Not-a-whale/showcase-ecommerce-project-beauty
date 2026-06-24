@@ -4,7 +4,11 @@
   "license": "MIT",
   "scripts": {
     "build:all": "nx run-many -t build --all --output-style=static",
-    "serve:all": "nx run-many -t serve --projects api,@ecommerce/payment --parallel=2 --output-style=stream --verbose"
+    "serve:all": "nx run-many -t serve --projects api,@ecommerce/payment --parallel=2 --output-style=stream --verbose",
+    "migration:run": "node --require @swc-node/register --require tsconfig-paths/register node_modules/typeorm/cli.js migration:run -d apps/api/src/data-source.ts",
+    "migration:revert": "node --require @swc-node/register --require tsconfig-paths/register node_modules/typeorm/cli.js migration:revert -d apps/api/src/data-source.ts",
+    "migration:generate": "node --require @swc-node/register --require tsconfig-paths/register node_modules/typeorm/cli.js migration:generate -d apps/api/src/data-source.ts",
+    "migration:show": "node --require @swc-node/register --require tsconfig-paths/register node_modules/typeorm/cli.js migration:show -d apps/api/src/data-source.ts"
   },
   "private": true,
   "devDependencies": {

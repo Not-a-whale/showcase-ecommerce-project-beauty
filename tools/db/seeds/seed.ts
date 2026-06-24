@@ -34,7 +34,7 @@ async function seed() {
       { name: 'Outerwear', slug: 'outerwear' },
     ];
 
-    const insertedCategories = [];
+    const insertedCategories: { id: string; slug: string }[] = [];
     for (const cat of categories) {
       const result = await queryRunner.query(
         `INSERT INTO categories (id, name, slug)
@@ -53,31 +53,157 @@ async function seed() {
 
     const products = [
       // T-Shirts
-      { name: 'Classic White Tee', description: 'Essential cotton crew neck', price: 29.99, stock: 100, categorySlug: 'tshirts' },
-      { name: 'Vintage Band Tee', description: 'Retro rock band graphic print', price: 34.99, stock: 75, categorySlug: 'tshirts' },
-      { name: 'Striped Sailor Tee', description: 'Navy and white horizontal stripes', price: 39.99, stock: 60, categorySlug: 'tshirts' },
-      { name: 'Oversized Black Tee', description: 'Relaxed fit heavyweight cotton', price: 44.99, stock: 80, categorySlug: 'tshirts' },
-      { name: 'Pocket Henley Tee', description: 'Three-button henley with chest pocket', price: 37.99, stock: 55, categorySlug: 'tshirts' },
+      {
+        name: 'Classic White Tee',
+        description: 'Essential cotton crew neck',
+        price: 29.99,
+        stock: 100,
+        categorySlug: 'tshirts',
+      },
+      {
+        name: 'Vintage Band Tee',
+        description: 'Retro rock band graphic print',
+        price: 34.99,
+        stock: 75,
+        categorySlug: 'tshirts',
+      },
+      {
+        name: 'Striped Sailor Tee',
+        description: 'Navy and white horizontal stripes',
+        price: 39.99,
+        stock: 60,
+        categorySlug: 'tshirts',
+      },
+      {
+        name: 'Oversized Black Tee',
+        description: 'Relaxed fit heavyweight cotton',
+        price: 44.99,
+        stock: 80,
+        categorySlug: 'tshirts',
+      },
+      {
+        name: 'Pocket Henley Tee',
+        description: 'Three-button henley with chest pocket',
+        price: 37.99,
+        stock: 55,
+        categorySlug: 'tshirts',
+      },
       // Dresses
-      { name: 'Summer Floral Dress', description: 'Lightweight A-line with floral print', price: 69.99, stock: 40, categorySlug: 'dresses' },
-      { name: 'Little Black Dress', description: 'Timeless cocktail dress', price: 89.99, stock: 35, categorySlug: 'dresses' },
-      { name: 'Linen Midi Dress', description: 'Breathable linen with side pockets', price: 79.99, stock: 30, categorySlug: 'dresses' },
-      { name: 'Wrap Dress', description: 'Adjustable wrap with V-neckline', price: 74.99, stock: 45, categorySlug: 'dresses' },
-      { name: 'Maxi Boho Dress', description: 'Floor-length with embroidered details', price: 94.99, stock: 25, categorySlug: 'dresses' },
+      {
+        name: 'Summer Floral Dress',
+        description: 'Lightweight A-line with floral print',
+        price: 69.99,
+        stock: 40,
+        categorySlug: 'dresses',
+      },
+      {
+        name: 'Little Black Dress',
+        description: 'Timeless cocktail dress',
+        price: 89.99,
+        stock: 35,
+        categorySlug: 'dresses',
+      },
+      {
+        name: 'Linen Midi Dress',
+        description: 'Breathable linen with side pockets',
+        price: 79.99,
+        stock: 30,
+        categorySlug: 'dresses',
+      },
+      {
+        name: 'Wrap Dress',
+        description: 'Adjustable wrap with V-neckline',
+        price: 74.99,
+        stock: 45,
+        categorySlug: 'dresses',
+      },
+      {
+        name: 'Maxi Boho Dress',
+        description: 'Floor-length with embroidered details',
+        price: 94.99,
+        stock: 25,
+        categorySlug: 'dresses',
+      },
       // Shoes
-      { name: 'White Leather Sneakers', description: 'Minimalist leather low-tops', price: 119.99, stock: 50, categorySlug: 'shoes' },
-      { name: 'Canvas Slip-Ons', description: 'Easy-on casual canvas shoes', price: 49.99, stock: 90, categorySlug: 'shoes' },
-      { name: 'Leather Chelsea Boots', description: 'Classic elastic-side ankle boots', price: 159.99, stock: 30, categorySlug: 'shoes' },
-      { name: 'Running Shoes', description: 'Lightweight mesh with cushioned sole', price: 99.99, stock: 65, categorySlug: 'shoes' },
-      { name: 'Suede Loafers', description: 'Soft suede with leather sole', price: 129.99, stock: 40, categorySlug: 'shoes' },
+      {
+        name: 'White Leather Sneakers',
+        description: 'Minimalist leather low-tops',
+        price: 119.99,
+        stock: 50,
+        categorySlug: 'shoes',
+      },
+      {
+        name: 'Canvas Slip-Ons',
+        description: 'Easy-on casual canvas shoes',
+        price: 49.99,
+        stock: 90,
+        categorySlug: 'shoes',
+      },
+      {
+        name: 'Leather Chelsea Boots',
+        description: 'Classic elastic-side ankle boots',
+        price: 159.99,
+        stock: 30,
+        categorySlug: 'shoes',
+      },
+      {
+        name: 'Running Shoes',
+        description: 'Lightweight mesh with cushioned sole',
+        price: 99.99,
+        stock: 65,
+        categorySlug: 'shoes',
+      },
+      {
+        name: 'Suede Loafers',
+        description: 'Soft suede with leather sole',
+        price: 129.99,
+        stock: 40,
+        categorySlug: 'shoes',
+      },
       // Accessories
-      { name: 'Leather Belt', description: 'Full-grain leather with brass buckle', price: 45.99, stock: 100, categorySlug: 'accessories' },
-      { name: 'Wool Beanie', description: 'Ribbed knit merino wool', price: 24.99, stock: 120, categorySlug: 'accessories' },
-      { name: 'Canvas Tote Bag', description: 'Heavy-duty canvas with leather handles', price: 54.99, stock: 70, categorySlug: 'accessories' },
+      {
+        name: 'Leather Belt',
+        description: 'Full-grain leather with brass buckle',
+        price: 45.99,
+        stock: 100,
+        categorySlug: 'accessories',
+      },
+      {
+        name: 'Wool Beanie',
+        description: 'Ribbed knit merino wool',
+        price: 24.99,
+        stock: 120,
+        categorySlug: 'accessories',
+      },
+      {
+        name: 'Canvas Tote Bag',
+        description: 'Heavy-duty canvas with leather handles',
+        price: 54.99,
+        stock: 70,
+        categorySlug: 'accessories',
+      },
       // Outerwear
-      { name: 'Denim Jacket', description: 'Classic trucker style denim', price: 89.99, stock: 45, categorySlug: 'outerwear' },
-      { name: 'Puffer Vest', description: 'Lightweight down-filled vest', price: 109.99, stock: 35, categorySlug: 'outerwear' },
-      { name: 'Wool Overcoat', description: 'Tailored double-breasted wool blend', price: 199.99, stock: 20, categorySlug: 'outerwear' },
+      {
+        name: 'Denim Jacket',
+        description: 'Classic trucker style denim',
+        price: 89.99,
+        stock: 45,
+        categorySlug: 'outerwear',
+      },
+      {
+        name: 'Puffer Vest',
+        description: 'Lightweight down-filled vest',
+        price: 109.99,
+        stock: 35,
+        categorySlug: 'outerwear',
+      },
+      {
+        name: 'Wool Overcoat',
+        description: 'Tailored double-breasted wool blend',
+        price: 199.99,
+        stock: 20,
+        categorySlug: 'outerwear',
+      },
     ];
 
     for (const product of products) {
@@ -95,7 +221,9 @@ async function seed() {
           // ~30% of products on sale
           Math.random() < 0.3 ? (product.price * 0.7).toFixed(2) : null,
           Math.random() < 0.3 ? new Date() : null,
-          Math.random() < 0.3 ? new Date(Date.now() + 30 * 24 * 60 * 60 * 1000) : null,
+          Math.random() < 0.3
+            ? new Date(Date.now() + 30 * 24 * 60 * 60 * 1000)
+            : null,
         ],
       );
     }
@@ -137,7 +265,15 @@ async function seed() {
         `INSERT INTO promo_codes (id, code, "discountType", "discountValue", "minOrderAmount", "maxUses", "currentUses", "startsAt", "expiresAt", "isActive", version)
          VALUES (gen_random_uuid(), $1, $2, $3, $4, $5, 0, $6, $7, true, 1)
          ON CONFLICT (code) DO NOTHING`,
-        [promo.code, promo.discountType, promo.discountValue, promo.minOrderAmount, promo.maxUses, promo.startsAt, promo.expiresAt],
+        [
+          promo.code,
+          promo.discountType,
+          promo.discountValue,
+          promo.minOrderAmount,
+          promo.maxUses,
+          promo.startsAt,
+          promo.expiresAt,
+        ],
       );
     }
     console.log(`Seeded ${promoCodes.length} promo codes`);
@@ -146,9 +282,24 @@ async function seed() {
     const passwordHash = await bcrypt.hash('password123', 10);
 
     const users = [
-      { email: 'admin@test.com', firstName: 'Admin', lastName: 'User', role: 'ADMIN' },
-      { email: 'manager@test.com', firstName: 'Manager', lastName: 'User', role: 'MANAGER' },
-      { email: 'user@test.com', firstName: 'Test', lastName: 'User', role: 'USER' },
+      {
+        email: 'admin@test.com',
+        firstName: 'Admin',
+        lastName: 'User',
+        role: 'ADMIN',
+      },
+      {
+        email: 'manager@test.com',
+        firstName: 'Manager',
+        lastName: 'User',
+        role: 'MANAGER',
+      },
+      {
+        email: 'user@test.com',
+        firstName: 'Test',
+        lastName: 'User',
+        role: 'USER',
+      },
     ];
 
     for (const user of users) {
@@ -173,4 +324,3 @@ async function seed() {
 }
 
 seed();
-

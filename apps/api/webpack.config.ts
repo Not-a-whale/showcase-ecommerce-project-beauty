@@ -10,7 +10,12 @@ const config: Configuration = {
     }),
   },
   watchOptions: {
-    ignored: ['**/dist/**', '**/.nx/**', '**/node_modules/**'],
+    ignored: [
+      '**/dist/**',
+      '**/dist/apps/**',
+      '**/.nx/**',
+      '**/node_modules/**',
+    ],
   },
   plugins: [
     new NxAppWebpackPlugin({
@@ -28,5 +33,3 @@ const config: Configuration = {
 };
 
 module.exports = config;
-
-
