@@ -8,6 +8,7 @@ import { CreateProductDto } from './dto/create-product.dto';
 import { UpdateProductDto } from './dto/update-product.dto';
 import { ProductQueryDto } from './dto/product-query.dto';
 import { ProductResponseDto } from './dto/product-response.dto';
+import { ProductsCacheService } from './products-cache.service';
 
 interface SortMeta {
   column: string;
@@ -21,6 +22,7 @@ export class ProductsService {
   constructor(
     @InjectRepository(Product)
     private productRepo: Repository<Product>,
+    private cacheService: ProductsCacheService,
   ) {}
 
   async create(dto: CreateProductDto): Promise<ProductResponseDto> {
@@ -87,6 +89,7 @@ export class ProductsService {
   }
 
   async findOne(id: string): Promise<ProductResponseDto> {
+    console.log('>>> findOne START', id);
     const product = await this.findEntity(id);
     return plainToInstance(ProductResponseDto, product);
   }
@@ -95,6 +98,7 @@ export class ProductsService {
     const product = await this.findEntity(id);
     this.productRepo.merge(product, dto);
     const saved = await this.productRepo.save(product);
+    await this.cacheService.invalidate(id);
     return plainToInstance(ProductResponseDto, saved);
   }
 
@@ -102,15 +106,23 @@ export class ProductsService {
     const product = await this.findEntity(id);
     product.isDeleted = true;
     await this.productRepo.save(product);
+    await this.cacheService.invalidate(id);
   }
 
   private async findEntity(id: string): Promise<Product> {
+    console.log('>>> findEntity START', id);
+    const cached = await this.cacheService.get(id);
+    console.log('>>> cached?', cached ? 'HIT' : 'MISS');
+    if (cached) return cached;
     const product = await this.productRepo.findOne({
       where: { id, isDeleted: false },
     });
     if (!product) {
       throw new NotFoundException('Product not found');
     }
+    console.log('>>> calling cacheService.set');
+    await this.cacheService.set(product);
+    console.log('>>> set done');
     return product;
   }
 

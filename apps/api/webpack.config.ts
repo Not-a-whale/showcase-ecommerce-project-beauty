@@ -28,6 +28,7 @@ const config: Configuration = {
       outputHashing: 'none',
       generatePackageJson: false,
       sourceMap: true,
+      outputPath: '../../dist/apps/api',
     }),
   ],
 };
