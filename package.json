@@ -8,7 +8,10 @@
     "migration:run": "node --require @swc-node/register --require tsconfig-paths/register node_modules/typeorm/cli.js migration:run -d apps/api/src/data-source.ts",
     "migration:revert": "node --require @swc-node/register --require tsconfig-paths/register node_modules/typeorm/cli.js migration:revert -d apps/api/src/data-source.ts",
     "migration:generate": "node --require @swc-node/register --require tsconfig-paths/register node_modules/typeorm/cli.js migration:generate -d apps/api/src/data-source.ts",
-    "migration:show": "node --require @swc-node/register --require tsconfig-paths/register node_modules/typeorm/cli.js migration:show -d apps/api/src/data-source.ts"
+    "migration:show": "node --require @swc-node/register --require tsconfig-paths/register node_modules/typeorm/cli.js migration:show -d apps/api/src/data-source.ts",
+    "payment:migration:run": "node --require @swc-node/register --require tsconfig-paths/register node_modules/typeorm/cli.js migration:run -d apps/payment/src/data-source.ts",
+    "payment:migration:revert": "node --require @swc-node/register --require tsconfig-paths/register node_modules/typeorm/cli.js migration:revert -d apps/payment/src/data-source.ts",
+    "payment:migration:show": "node --require @swc-node/register --require tsconfig-paths/register node_modules/typeorm/cli.js migration:show -d apps/payment/src/data-source.ts"
   },
   "private": true,
   "devDependencies": {
@@ -88,7 +91,7 @@
     "react-dom": "^19.0.0",
     "reflect-metadata": "^0.1.13",
     "rxjs": "^7.8.0",
-    "stripe": "^22.1.1",
+    "stripe": "^22.6.2",
     "swagger-ui-express": "^5.0.1",
     "typeorm": "^0.3.29"
   }

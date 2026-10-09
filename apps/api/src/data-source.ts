@@ -1,25 +1,32 @@
-/**
- * This file is used ONLY by the TypeORM CLI (migration:generate, migration:run, etc.)
- * It is NOT imported by the NestJS app — the app uses data-source.ts in common/.
- */
-import 'reflect-metadata';
-import * as dotenv from 'dotenv';
-import { resolve } from 'path';
-import { DataSource } from 'typeorm';
+import { Order } from './app/orders/entities/order.entity';
+import { DataSourceOptions } from 'typeorm';
+import { User } from './app/auth/entities/user.entity';
+import { Product } from './app/products/entities/product.entity';
+import { Category } from './app/products/entities/category.entity';
+import { OrderItem } from './app/orders/entities/order-item.entity';
+import { PromoCode } from './app/orders/entities/promo-code.entity';
+import { GiftCard } from './app/orders/entities/gift-card.entity';
+import { Notification } from './app/notifications/entities/notification.entity';
+import { Wishlist } from './app/wishlist/entities/wishlist.entity';
 
-dotenv.config({ path: resolve(__dirname, '../../../.env') });
-
-export default new DataSource({
+export const dataSourceOptions: DataSourceOptions = {
   type: 'postgres',
-  host: process.env.DB_HOST || process.env.DATABASE_HOST || 'localhost',
-  port: parseInt(process.env.DB_PORT || process.env.DATABASE_PORT || '5432'),
-  username: process.env.DB_USERNAME || process.env.DATABASE_USER || 'ecommerce',
-  password: process.env.DB_PASSWORD || process.env.DATABASE_PASSWORD || 'ecommerce_pass',
-  database: process.env.DB_NAME || process.env.DATABASE_NAME || 'ecommerce',
-  entities: [],  // not needed for raw SQL migrations; avoids ESM .js-extension issues in shared-types
-  migrations: [__dirname + '/migrations/*.{ts,js}'],
-  synchronize: false, // never true for CLI datasource
+  host: process.env.DB_HOST || 'localhost',
+  port: parseInt(process.env.DB_PORT || '5432'),
+  username: process.env.DB_USERNAME || 'ecommerce',
+  password: process.env.DB_PASSWORD || 'ecommerce_pass',
+  database: process.env.DB_NAME || 'ecommerce',
+  entities: [
+    User,
+    Product,
+    Category,
+    Order,
+    OrderItem,
+    PromoCode,
+    GiftCard,
+    Notification,
+    Wishlist,
+  ],
+  synchronize: false, // schema is managed exclusively via migrations — run: npm run migration:run
   logging: true,
-});
-
-
+};

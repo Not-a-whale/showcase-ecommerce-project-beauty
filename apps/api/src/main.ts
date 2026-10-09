@@ -1,8 +1,9 @@
 import { NestFactory, Reflector } from '@nestjs/core';
 import { ClassSerializerInterceptor, ValidationPipe } from '@nestjs/common';
-import { SwaggerModule, DocumentBuilder } from '@nestjs/swagger';
+import { DocumentBuilder, SwaggerModule } from '@nestjs/swagger';
 import { AppModule } from './app/app.module';
 import { HttpExceptionFilter } from './app/common/filters/http-exception.filter';
+import { MicroserviceOptions, Transport } from '@nestjs/microservices';
 
 const cookieParser = require('cookie-parser');
 
@@ -56,6 +57,20 @@ async function bootstrap() {
   const document = SwaggerModule.createDocument(app, config);
   SwaggerModule.setup('api/docs', app, document);
 
+  app.connectMicroservice<MicroserviceOptions>({
+    transport: Transport.RMQ,
+    options: {
+      urls: [
+        process.env.RABBITMQ_URL ||
+          'amqp://ecommerce:ecommerce_pass@localhost:5672',
+      ],
+      queue: 'orders_queue',
+      queueOptions: { durable: true },
+      noAck: false,
+    },
+  });
+
+  await app.startAllMicroservices();
   const port = process.env.API_PORT || 3000;
   await app.listen(port);
   console.log(`API running on http://localhost:${port}`);

@@ -1,0 +1,272 @@
+
+[7m[1m[36m NX [39m[22m[27m  [36mRunning target [1mserve[22m for project api and [1m1[22m task it depends on:[39m
+
+[2m[36m[39m[22m
+
+[2m> [22m[2mnx run[22m api:build
+
+[2m> [22mwebpack-cli build --config webpack.config.ts --node-env=production
+
+webpack compiled [1m[32msuccessfully[39m[22m (49c09d60ae4257d5)
+
+[2m> [22m[2mnx run[22m api:serve:development
+
+[2m> [22m[2mnx run[22m api:build:development
+[2m> [22mwebpack-cli build --config webpack.config.ts --node-env=development
+webpack compiled [1m[32msuccessfully[39m[22m (49c09d60ae4257d5)
+[2m[32m[39m[22m
+[7m[1m[32m NX [39m[22m[27m  [32mSuccessfully ran target [1mbuild[22m for project api[39m
+[1m[31mStarting inspector on localhost:9229 failed: address already in use
+[39m[22m
+[32m[Nest] 51628  - [39m09/25/2026, 2:12:52 PM [32m    LOG[39m [38;5;3m[NestFactory] [39m[32mStarting Nest application...[39m
+[32m[Nest] 51628  - [39m09/25/2026, 2:12:52 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mRedisModule dependencies initialized[39m[38;5;3m +40ms[39m
+[32m[Nest] 51628  - [39m09/25/2026, 2:12:52 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mClientsModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 51628  - [39m09/25/2026, 2:12:52 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mTypeOrmModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 51628  - [39m09/25/2026, 2:12:52 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mConfigHostModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 51628  - [39m09/25/2026, 2:12:52 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mJwtModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 51628  - [39m09/25/2026, 2:12:52 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mWishlistModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 51628  - [39m09/25/2026, 2:12:52 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mNotificationsModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 51628  - [39m09/25/2026, 2:12:52 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mAdminModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 51628  - [39m09/25/2026, 2:12:52 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mConfigModule dependencies initialized[39m[38;5;3m +1ms[39m
+[32m[Nest] 51628  - [39m09/25/2026, 2:12:52 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mAppModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 51628  - [39m09/25/2026, 2:12:52 PM [32m    LOG[39m [38;5;3m[RedisService] [39m[32mConnected to Redis[39m
+[90m[4mquery:[24m[39m [94mSELECT[0m [95mversion[0m[37m([0m[37m)[0m
+[90m[4mquery:[24m[39m [94mSELECT[0m [37m*[0m [94mFROM[0m [95mcurrent_schema[0m[37m([0m[37m)[0m
+[90m[4mquery:[24m[39m [94mCREATE[0m [37mEXTENSION[0m [94mIF[0m [94mNOT[0m [94mEXISTS[0m [37m"uuid-ossp"[0m
+[32m[Nest] 51628  - [39m09/25/2026, 2:12:52 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mTypeOrmCoreModule dependencies initialized[39m[38;5;3m +26ms[39m
+[32m[Nest] 51628  - [39m09/25/2026, 2:12:52 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mTypeOrmModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 51628  - [39m09/25/2026, 2:12:52 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mTypeOrmModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 51628  - [39m09/25/2026, 2:12:52 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mOrdersModule dependencies initialized[39m[38;5;3m +1ms[39m
+[32m[Nest] 51628  - [39m09/25/2026, 2:12:52 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mProductsModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 51628  - [39m09/25/2026, 2:12:52 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mAuthModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 51628  - [39m09/25/2026, 2:12:52 PM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mAppController {/api}:[39m[38;5;3m +12ms[39m
+[32m[Nest] 51628  - [39m09/25/2026, 2:12:52 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/api, GET} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 51628  - [39m09/25/2026, 2:12:52 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/api/health, GET} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 51628  - [39m09/25/2026, 2:12:52 PM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mAuthController {/api/auth}:[39m[38;5;3m +0ms[39m
+[32m[Nest] 51628  - [39m09/25/2026, 2:12:52 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/api/auth/signup, POST} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 51628  - [39m09/25/2026, 2:12:52 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/api/auth/login, POST} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 51628  - [39m09/25/2026, 2:12:52 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/api/auth/logout, POST} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 51628  - [39m09/25/2026, 2:12:52 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/api/auth/refresh, POST} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 51628  - [39m09/25/2026, 2:12:52 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/api/auth/me, GET} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 51628  - [39m09/25/2026, 2:12:52 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/api/auth/change-password, POST} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 51628  - [39m09/25/2026, 2:12:52 PM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mProductsController {/api/products}:[39m[38;5;3m +0ms[39m
+[32m[Nest] 51628  - [39m09/25/2026, 2:12:52 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/api/products, GET} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 51628  - [39m09/25/2026, 2:12:52 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/api/products/:id, GET} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 51628  - [39m09/25/2026, 2:12:52 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/api/products, POST} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 51628  - [39m09/25/2026, 2:12:52 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/api/products/:id, PATCH} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 51628  - [39m09/25/2026, 2:12:52 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/api/products/:id, DELETE} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 51628  - [39m09/25/2026, 2:12:52 PM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mOrdersController {/api/orders}:[39m[38;5;3m +0ms[39m
+[32m[Nest] 51628  - [39m09/25/2026, 2:12:52 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/api/orders, POST} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 51628  - [39m09/25/2026, 2:12:52 PM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mWishlistController {/api/wishlist}:[39m[38;5;3m +0ms[39m
+[32m[Nest] 51628  - [39m09/25/2026, 2:12:52 PM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mNotificationsController {/api/notifications}:[39m[38;5;3m +0ms[39m
+[32m[Nest] 51628  - [39m09/25/2026, 2:12:52 PM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mAnalyticsController {/api/analytics}:[39m[38;5;3m +0ms[39m
+[32m[Nest] 51628  - [39m09/25/2026, 2:12:52 PM [32m    LOG[39m [38;5;3m[NestApplication] [39m[32mNest application successfully started[39m[38;5;3m +1ms[39m
+API running on http://localhost:3000
+Swagger: http://localhost:3000/api/docs
+[90m[4mquery:[24m[39m [94mSELECT[0m [37m"product"[0m[37m.[0m[37m"id"[0m [94mAS[0m [37m"product_id"[0m[37m,[0m [37m"product"[0m[37m.[0m[37m"name"[0m [94mAS[0m [37m"product_name"[0m[37m,[0m [37m"product"[0m[37m.[0m[37m"description"[0m [94mAS[0m [37m"product_description"[0m[37m,[0m [37m"product"[0m[37m.[0m[37m"price"[0m [94mAS[0m [37m"product_price"[0m[37m,[0m [37m"product"[0m[37m.[0m[37m"stock"[0m [94mAS[0m [37m"product_stock"[0m[37m,[0m [37m"product"[0m[37m.[0m[37m"imageUrl"[0m [94mAS[0m [37m"product_imageUrl"[0m[37m,[0m [37m"product"[0m[37m.[0m[37m"isDeleted"[0m [94mAS[0m [37m"product_isDeleted"[0m[37m,[0m [37m"product"[0m[37m.[0m[37m"purchaseCount"[0m [94mAS[0m [37m"product_purchaseCount"[0m[37m,[0m [37m"product"[0m[37m.[0m[37m"salePrice"[0m [94mAS[0m [37m"product_salePrice"[0m[37m,[0m [37m"product"[0m[37m.[0m[37m"saleStartsAt"[0m [94mAS[0m [37m"product_saleStartsAt"[0m[37m,[0m [37m"product"[0m[37m.[0m[37m"saleEndsAt"[0m [94mAS[0m [37m"product_saleEndsAt"[0m[37m,[0m [37m"product"[0m[37m.[0m[37m"version"[0m [94mAS[0m [37m"product_version"[0m[37m,[0m [37m"product"[0m[37m.[0m[37m"categoryId"[0m [94mAS[0m [37m"product_categoryId"[0m[37m,[0m [37m"product"[0m[37m.[0m[37m"createdAt"[0m [94mAS[0m [37m"product_createdAt"[0m[37m,[0m [37m"product"[0m[37m.[0m[37m"updatedAt"[0m [94mAS[0m [37m"product_updatedAt"[0m [94mFROM[0m [37m"products"[0m [37m"product"[0m [94mWHERE[0m [37m"product"[0m[37m.[0m[37m"isDeleted"[0m [37m=[0m [37m$[0m[32m1[0m [94mORDER BY[0m [37m"product"[0m[37m.[0m[37m"createdAt"[0m [94mDESC[0m[37m,[0m [37m"product"[0m[37m.[0m[37m"id"[0m [94mASC[0m [94mLIMIT[0m [32m21[0m [90m-- PARAMETERS: [false][0m
+[90m[4mquery:[24m[39m [94mSELECT[0m [37m"product"[0m[37m.[0m[37m"id"[0m [94mAS[0m [37m"product_id"[0m[37m,[0m [37m"product"[0m[37m.[0m[37m"name"[0m [94mAS[0m [37m"product_name"[0m[37m,[0m [37m"product"[0m[37m.[0m[37m"description"[0m [94mAS[0m [37m"product_description"[0m[37m,[0m [37m"product"[0m[37m.[0m[37m"price"[0m [94mAS[0m [37m"product_price"[0m[37m,[0m [37m"product"[0m[37m.[0m[37m"stock"[0m [94mAS[0m [37m"product_stock"[0m[37m,[0m [37m"product"[0m[37m.[0m[37m"imageUrl"[0m [94mAS[0m [37m"product_imageUrl"[0m[37m,[0m [37m"product"[0m[37m.[0m[37m"isDeleted"[0m [94mAS[0m [37m"product_isDeleted"[0m[37m,[0m [37m"product"[0m[37m.[0m[37m"purchaseCount"[0m [94mAS[0m [37m"product_purchaseCount"[0m[37m,[0m [37m"product"[0m[37m.[0m[37m"salePrice"[0m [94mAS[0m [37m"product_salePrice"[0m[37m,[0m [37m"product"[0m[37m.[0m[37m"saleStartsAt"[0m [94mAS[0m [37m"product_saleStartsAt"[0m[37m,[0m [37m"product"[0m[37m.[0m[37m"saleEndsAt"[0m [94mAS[0m [37m"product_saleEndsAt"[0m[37m,[0m [37m"product"[0m[37m.[0m[37m"version"[0m [94mAS[0m [37m"product_version"[0m[37m,[0m [37m"product"[0m[37m.[0m[37m"categoryId"[0m [94mAS[0m [37m"product_categoryId"[0m[37m,[0m [37m"product"[0m[37m.[0m[37m"createdAt"[0m [94mAS[0m [37m"product_createdAt"[0m[37m,[0m [37m"product"[0m[37m.[0m[37m"updatedAt"[0m [94mAS[0m [37m"product_updatedAt"[0m [94mFROM[0m [37m"products"[0m [37m"product"[0m [94mWHERE[0m [37m"product"[0m[37m.[0m[37m"isDeleted"[0m [37m=[0m [37m$[0m[32m1[0m [94mORDER BY[0m [37m"product"[0m[37m.[0m[37m"createdAt"[0m [94mDESC[0m[37m,[0m [37m"product"[0m[37m.[0m[37m"id"[0m [94mASC[0m [94mLIMIT[0m [32m21[0m [90m-- PARAMETERS: [false][0m
+[90m[4mquery:[24m[39m [94mSELECT[0m [37m"product"[0m[37m.[0m[37m"id"[0m [94mAS[0m [37m"product_id"[0m[37m,[0m [37m"product"[0m[37m.[0m[37m"name"[0m [94mAS[0m [37m"product_name"[0m[37m,[0m [37m"product"[0m[37m.[0m[37m"description"[0m [94mAS[0m [37m"product_description"[0m[37m,[0m [37m"product"[0m[37m.[0m[37m"price"[0m [94mAS[0m [37m"product_price"[0m[37m,[0m [37m"product"[0m[37m.[0m[37m"stock"[0m [94mAS[0m [37m"product_stock"[0m[37m,[0m [37m"product"[0m[37m.[0m[37m"imageUrl"[0m [94mAS[0m [37m"product_imageUrl"[0m[37m,[0m [37m"product"[0m[37m.[0m[37m"isDeleted"[0m [94mAS[0m [37m"product_isDeleted"[0m[37m,[0m [37m"product"[0m[37m.[0m[37m"purchaseCount"[0m [94mAS[0m [37m"product_purchaseCount"[0m[37m,[0m [37m"product"[0m[37m.[0m[37m"salePrice"[0m [94mAS[0m [37m"product_salePrice"[0m[37m,[0m [37m"product"[0m[37m.[0m[37m"saleStartsAt"[0m [94mAS[0m [37m"product_saleStartsAt"[0m[37m,[0m [37m"product"[0m[37m.[0m[37m"saleEndsAt"[0m [94mAS[0m [37m"product_saleEndsAt"[0m[37m,[0m [37m"product"[0m[37m.[0m[37m"version"[0m [94mAS[0m [37m"product_version"[0m[37m,[0m [37m"product"[0m[37m.[0m[37m"categoryId"[0m [94mAS[0m [37m"product_categoryId"[0m[37m,[0m [37m"product"[0m[37m.[0m[37m"createdAt"[0m [94mAS[0m [37m"product_createdAt"[0m[37m,[0m [37m"product"[0m[37m.[0m[37m"updatedAt"[0m [94mAS[0m [37m"product_updatedAt"[0m [94mFROM[0m [37m"products"[0m [37m"product"[0m [94mWHERE[0m [37m"product"[0m[37m.[0m[37m"isDeleted"[0m [37m=[0m [37m$[0m[32m1[0m [94mORDER BY[0m [37m"product"[0m[37m.[0m[37m"createdAt"[0m [94mDESC[0m[37m,[0m [37m"product"[0m[37m.[0m[37m"id"[0m [94mASC[0m [94mLIMIT[0m [32m21[0m [90m-- PARAMETERS: [false][0m
+[90m[4mquery:[24m[39m [94mSELECT[0m [37m"User"[0m[37m.[0m[37m"id"[0m [94mAS[0m [37m"User_id"[0m[37m,[0m [37m"User"[0m[37m.[0m[37m"email"[0m [94mAS[0m [37m"User_email"[0m[37m,[0m [37m"User"[0m[37m.[0m[37m"passwordHash"[0m [94mAS[0m [37m"User_passwordHash"[0m[37m,[0m [37m"User"[0m[37m.[0m[37m"firstName"[0m [94mAS[0m [37m"User_firstName"[0m[37m,[0m [37m"User"[0m[37m.[0m[37m"lastName"[0m [94mAS[0m [37m"User_lastName"[0m[37m,[0m [37m"User"[0m[37m.[0m[37m"role"[0m [94mAS[0m [37m"User_role"[0m[37m,[0m [37m"User"[0m[37m.[0m[37m"tokenVersion"[0m [94mAS[0m [37m"User_tokenVersion"[0m[37m,[0m [37m"User"[0m[37m.[0m[37m"isBanned"[0m [94mAS[0m [37m"User_isBanned"[0m[37m,[0m [37m"User"[0m[37m.[0m[37m"createdAt"[0m [94mAS[0m [37m"User_createdAt"[0m[37m,[0m [37m"User"[0m[37m.[0m[37m"updatedAt"[0m [94mAS[0m [37m"User_updatedAt"[0m [94mFROM[0m [37m"users"[0m [37m"User"[0m [94mWHERE[0m [37m([0m[37m([0m[37m"User"[0m[37m.[0m[37m"email"[0m [37m=[0m [37m$[0m[32m1[0m[37m)[0m[37m)[0m [94mLIMIT[0m [32m1[0m [90m-- PARAMETERS: ["user@test.com"][0m
+[90m[4mquery:[24m[39m [37mSTART[0m [37mTRANSACTION[0m
+[90m[4mquery:[24m[39m [94mSELECT[0m [37m"Product"[0m[37m.[0m[37m"id"[0m [94mAS[0m [37m"Product_id"[0m[37m,[0m [37m"Product"[0m[37m.[0m[37m"name"[0m [94mAS[0m [37m"Product_name"[0m[37m,[0m [37m"Product"[0m[37m.[0m[37m"description"[0m [94mAS[0m [37m"Product_description"[0m[37m,[0m [37m"Product"[0m[37m.[0m[37m"price"[0m [94mAS[0m [37m"Product_price"[0m[37m,[0m [37m"Product"[0m[37m.[0m[37m"stock"[0m [94mAS[0m [37m"Product_stock"[0m[37m,[0m [37m"Product"[0m[37m.[0m[37m"imageUrl"[0m [94mAS[0m [37m"Product_imageUrl"[0m[37m,[0m [37m"Product"[0m[37m.[0m[37m"isDeleted"[0m [94mAS[0m [37m"Product_isDeleted"[0m[37m,[0m [37m"Product"[0m[37m.[0m[37m"purchaseCount"[0m [94mAS[0m [37m"Product_purchaseCount"[0m[37m,[0m [37m"Product"[0m[37m.[0m[37m"salePrice"[0m [94mAS[0m [37m"Product_salePrice"[0m[37m,[0m [37m"Product"[0m[37m.[0m[37m"saleStartsAt"[0m [94mAS[0m [37m"Product_saleStartsAt"[0m[37m,[0m [37m"Product"[0m[37m.[0m[37m"saleEndsAt"[0m [94mAS[0m [37m"Product_saleEndsAt"[0m[37m,[0m [37m"Product"[0m[37m.[0m[37m"version"[0m [94mAS[0m [37m"Product_version"[0m[37m,[0m [37m"Product"[0m[37m.[0m[37m"categoryId"[0m [94mAS[0m [37m"Product_categoryId"[0m[37m,[0m [37m"Product"[0m[37m.[0m[37m"createdAt"[0m [94mAS[0m [37m"Product_createdAt"[0m[37m,[0m [37m"Product"[0m[37m.[0m[37m"updatedAt"[0m [94mAS[0m [37m"Product_updatedAt"[0m [94mFROM[0m [37m"products"[0m [37m"Product"[0m [94mWHERE[0m [37m([0m[37m([0m[37m"Product"[0m[37m.[0m[37m"id"[0m [37m=[0m [37m$[0m[32m1[0m[37m)[0m [94mAND[0m [37m([0m[37m"Product"[0m[37m.[0m[37m"isDeleted"[0m [37m=[0m [37m$[0m[32m2[0m[37m)[0m[37m)[0m [94mLIMIT[0m [32m1[0m [90m-- PARAMETERS: ["03fce43b-63bc-44d9-9a18-80b7ae748ddd",false][0m
+[90m[4mquery:[24m[39m [94mUPDATE[0m [37m"products"[0m [94mSET[0m [37m"stock"[0m [37m=[0m [37m"stock"[0m [37m-[0m [37m$[0m[32m1[0m[37m,[0m [37m"purchaseCount"[0m [37m=[0m [37m"purchaseCount"[0m [37m+[0m [37m$[0m[32m1[0m[37m,[0m [37m"version"[0m [37m=[0m [37m"version"[0m [37m+[0m [32m1[0m[37m,[0m [37m"updatedAt"[0m [37m=[0m [37mCURRENT_TIMESTAMP[0m [94mWHERE[0m [37m"id"[0m [37m=[0m [37m$[0m[32m2[0m [94mAND[0m [37m"version"[0m [37m=[0m [37m$[0m[32m3[0m [90m-- PARAMETERS: [1,"03fce43b-63bc-44d9-9a18-80b7ae748ddd",17][0m
+[90m[4mquery:[24m[39m [94mINSERT INTO[0m [37m"orders"[0m[37m([0m[37m"id"[0m[37m,[0m [37m"userId"[0m[37m,[0m [37m"status"[0m[37m,[0m [37m"totalAmount"[0m[37m,[0m [37m"discountAmount"[0m[37m,[0m [37m"giftCardAmountUsed"[0m[37m,[0m [37m"stripeChargeAmount"[0m[37m,[0m [37m"promoCodeUsed"[0m[37m,[0m [37m"giftCardCodeUsed"[0m[37m,[0m [37m"shippingAddress"[0m[37m,[0m [37m"createdAt"[0m[37m,[0m [37m"updatedAt"[0m[37m)[0m [94mVALUES[0m [37m([0m[94mDEFAULT[0m[37m,[0m [37m$[0m[32m1[0m[37m,[0m [37m$[0m[32m2[0m[37m,[0m [37m$[0m[32m3[0m[37m,[0m [37m$[0m[32m4[0m[37m,[0m [37m$[0m[32m5[0m[37m,[0m [37m$[0m[32m6[0m[37m,[0m [37m$[0m[32m7[0m[37m,[0m [37m$[0m[32m8[0m[37m,[0m [37m$[0m[32m9[0m[37m,[0m [94mDEFAULT[0m[37m,[0m [94mDEFAULT[0m[37m)[0m [94mRETURNING[0m [37m"id"[0m[37m,[0m [37m"status"[0m[37m,[0m [37m"discountAmount"[0m[37m,[0m [37m"giftCardAmountUsed"[0m[37m,[0m [37m"createdAt"[0m[37m,[0m [37m"updatedAt"[0m [90m-- PARAMETERS: ["56ee1183-21b3-48a9-9d5c-5a401573d78b","PENDING",45.99,0,0,45.99,null,null,"{\"street\":\"Main St 1\",\"city\":\"Kyiv\",\"state\":\"Kyiv\",\"zipCode\":\"01001\",\"country\":\"UA\"}"][0m
+[90m[4mquery:[24m[39m [94mINSERT INTO[0m [37m"order_items"[0m[37m([0m[37m"id"[0m[37m,[0m [37m"orderId"[0m[37m,[0m [37m"productId"[0m[37m,[0m [37m"quantity"[0m[37m,[0m [37m"priceAtOrder"[0m[37m)[0m [94mVALUES[0m [37m([0m[94mDEFAULT[0m[37m,[0m [37m$[0m[32m1[0m[37m,[0m [37m$[0m[32m2[0m[37m,[0m [37m$[0m[32m3[0m[37m,[0m [37m$[0m[32m4[0m[37m)[0m [94mRETURNING[0m [37m"id"[0m [90m-- PARAMETERS: ["54fb2660-19bc-457f-b5a7-5175aa4fb0fd","03fce43b-63bc-44d9-9a18-80b7ae748ddd",1,45.99][0m
+[90m[4mquery:[24m[39m [94mCOMMIT[0m
+[32m[Nest] 51628  - [39m09/25/2026, 2:13:43 PM [32m    LOG[39m [38;5;3m[ClientProxy] [39m[32mSuccessfully connected to RMQ broker[39m
+[7m[1m[36m NX [39m[22m[27m [1mFile change detected. Restarting...[22m
+[1m[31mBuild failed, waiting for changes to restart...[39m[22m
+[7m[1m[36m NX [39m[22m[27m [1mFile change detected. Restarting...[22m
+[1m[31mBuild failed, waiting for changes to restart...[39m[22m
+[7m[1m[36m NX [39m[22m[27m [1mFile change detected. Restarting...[22m
+[1m[31mBuild failed, waiting for changes to restart...[39m[22m
+[7m[1m[36m NX [39m[22m[27m [1mFile change detected. Restarting...[22m
+[7m[1m[36m NX [39m[22m[27m [1mFile change detected. Restarting...[22m
+[1m[31mBuild failed, waiting for changes to restart...[39m[22m
+[7m[1m[36m NX [39m[22m[27m [1mFile change detected. Restarting...[22m
+[1m[31mBuild failed, waiting for changes to restart...[39m[22m
+[7m[1m[36m NX [39m[22m[27m [1mFile change detected. Restarting...[22m
+[1m[31mBuild failed, waiting for changes to restart...[39m[22m
+[7m[1m[36m NX [39m[22m[27m [1mFile change detected. Restarting...[22m
+[1m[31mBuild failed, waiting for changes to restart...[39m[22m
+[7m[1m[36m NX [39m[22m[27m [1mFile change detected. Restarting...[22m
+[7m[1m[36m NX [39m[22m[27m [1mFile change detected. Restarting...[22m
+[1m[31mBuild failed, waiting for changes to restart...[39m[22m
+[7m[1m[36m NX [39m[22m[27m [1mFile change detected. Restarting...[22m
+[1m[31mBuild failed, waiting for changes to restart...[39m[22m
+[7m[1m[36m NX [39m[22m[27m [1mFile change detected. Restarting...[22m
+[1m[31mBuild failed, waiting for changes to restart...[39m[22m
+[7m[1m[36m NX [39m[22m[27m [1mFile change detected. Restarting...[22m
+[1m[31mBuild failed, waiting for changes to restart...[39m[22m
+[7m[1m[36m NX [39m[22m[27m [1mFile change detected. Restarting...[22m
+[1m[31mBuild failed, waiting for changes to restart...[39m[22m
+[7m[1m[36m NX [39m[22m[27m [1mFile change detected. Restarting...[22m
+[1m[31mBuild failed, waiting for changes to restart...[39m[22m
+[7m[1m[36m NX [39m[22m[27m [1mFile change detected. Restarting...[22m
+[1m[31mBuild failed, waiting for changes to restart...[39m[22m
+[7m[1m[36m NX [39m[22m[27m [1mFile change detected. Restarting...[22m
+[1m[31mBuild failed, waiting for changes to restart...[39m[22m
+[7m[1m[36m NX [39m[22m[27m [1mFile change detected. Restarting...[22m
+[1m[31mBuild failed, waiting for changes to restart...[39m[22m
+[7m[1m[36m NX [39m[22m[27m [1mFile change detected. Restarting...[22m
+[7m[1m[36m NX [39m[22m[27m [1mFile change detected. Restarting...[22m
+[7m[1m[36m NX [39m[22m[27m [1mFile change detected. Restarting...[22m
+[7m[1m[36m NX [39m[22m[27m [1mProcess exited with code 3221225794, waiting for changes to restart...[22m
+[7m[1m[36m NX [39m[22m[27m [1mFile change detected. Restarting...[22m
+[7m[1m[36m NX [39m[22m[27m [1mFile change detected. Restarting...[22m
+[7m[1m[36m NX [39m[22m[27m [1mFile change detected. Restarting...[22m
+[7m[1m[36m NX [39m[22m[27m [1mProcess exited with code 3221225794, waiting for changes to restart...[22m
+[7m[1m[36m NX [39m[22m[27m [1mFile change detected. Restarting...[22m
+[1m[31mBuild failed, waiting for changes to restart...[39m[22m
+[7m[1m[36m NX [39m[22m[27m [1mFile change detected. Restarting...[22m
+[7m[1m[36m NX [39m[22m[27m [1mFile change detected. Restarting...[22m
+[7m[1m[36m NX [39m[22m[27m [1mFile change detected. Restarting...[22m
+[7m[1m[36m NX [39m[22m[27m [1mProcess exited with code 3221225794, waiting for changes to restart...[22m
+[7m[1m[36m NX [39m[22m[27m [1mFile change detected. Restarting...[22m
+[1m[31mBuild failed, waiting for changes to restart...[39m[22m
+[7m[1m[36m NX [39m[22m[27m [1mFile change detected. Restarting...[22m
+[1m[31mBuild failed, waiting for changes to restart...[39m[22m
+[7m[1m[36m NX [39m[22m[27m [1mFile change detected. Restarting...[22m
+[7m[1m[36m NX [39m[22m[27m [1mFile change detected. Restarting...[22m
+[7m[1m[36m NX [39m[22m[27m [1mFile change detected. Restarting...[22m
+[7m[1m[36m NX [39m[22m[27m [1mFile change detected. Restarting...[22m
+[7m[1m[36m NX [39m[22m[27m [1mProcess exited with code 3221225794, waiting for changes to restart...[22m
+[7m[1m[36m NX [39m[22m[27m [1mFile change detected. Restarting...[22m
+[7m[1m[36m NX [39m[22m[27m [1mFile change detected. Restarting...[22m
+[7m[1m[36m NX [39m[22m[27m [1mFile change detected. Restarting...[22m
+[7m[1m[36m NX [39m[22m[27m [1mProcess exited with code 3221225794, waiting for changes to restart...[22m
+[7m[1m[36m NX [39m[22m[27m [1mFile change detected. Restarting...[22m
+[7m[1m[36m NX [39m[22m[27m [1mFile change detected. Restarting...[22m
+[7m[1m[36m NX [39m[22m[27m [1mFile change detected. Restarting...[22m
+[7m[1m[36m NX [39m[22m[27m [1mFile change detected. Restarting...[22m
+[7m[1m[36m NX [39m[22m[27m [1mProcess exited with code 3221225794, waiting for changes to restart...[22m
+[7m[1m[36m NX [39m[22m[27m [1mFile change detected. Restarting...[22m
+[7m[1m[36m NX [39m[22m[27m [1mFile change detected. Restarting...[22m
+[7m[1m[36m NX [39m[22m[27m [1mFile change detected. Restarting...[22m
+[7m[1m[36m NX [39m[22m[27m [1mFile change detected. Restarting...[22m
+[7m[1m[36m NX [39m[22m[27m [1mProcess exited with code 3221225794, waiting for changes to restart...[22m
+[7m[1m[36m NX [39m[22m[27m [1mProcess exited with code 3221225794, waiting for changes to restart...[22m
+[7m[1m[36m NX [39m[22m[27m [1mFile change detected. Restarting...[22m
+[7m[1m[36m NX [39m[22m[27m [1mFile change detected. Restarting...[22m
+[7m[1m[36m NX [39m[22m[27m [1mFile change detected. Restarting...[22m
+[7m[1m[36m NX [39m[22m[27m [1mFile change detected. Restarting...[22m
+[7m[1m[36m NX [39m[22m[27m [1mProcess exited with code 3221225794, waiting for changes to restart...[22m
+[7m[1m[36m NX [39m[22m[27m [1mProcess exited with code 3221225794, waiting for changes to restart...[22m
+[7m[1m[36m NX [39m[22m[27m [1mFile change detected. Restarting...[22m
+[7m[1m[36m NX [39m[22m[27m [1mFile change detected. Restarting...[22m
+[7m[1m[36m NX [39m[22m[27m [1mFile change detected. Restarting...[22m
+[7m[1m[36m NX [39m[22m[27m [1mFile change detected. Restarting...[22m
+[7m[1m[36m NX [39m[22m[27m [1mProcess exited with code 3221225794, waiting for changes to restart...[22m
+[7m[1m[36m NX [39m[22m[27m [1mProcess exited with code 3221225794, waiting for changes to restart...[22m
+[7m[1m[36m NX [39m[22m[27m [1mFile change detected. Restarting...[22m
+[7m[1m[36m NX [39m[22m[27m [1mFile change detected. Restarting...[22m
+[7m[1m[36m NX [39m[22m[27m [1mFile change detected. Restarting...[22m
+[7m[1m[36m NX [39m[22m[27m [1mFile change detected. Restarting...[22m
+[7m[1m[36m NX [39m[22m[27m [1mProcess exited with code 3221225794, waiting for changes to restart...[22m
+[7m[1m[36m NX [39m[22m[27m [1mProcess exited with code 3221225794, waiting for changes to restart...[22m
+[7m[1m[36m NX [39m[22m[27m [1mFile change detected. Restarting...[22m
+[1m[31mBuild failed, waiting for changes to restart...[39m[22m
+[7m[1m[36m NX [39m[22m[27m [1mFile change detected. Restarting...[22m
+[7m[1m[36m NX [39m[22m[27m [1mFile change detected. Restarting...[22m
+[1m[31mBuild failed, waiting for changes to restart...[39m[22m
+[7m[1m[36m NX [39m[22m[27m [1mFile change detected. Restarting...[22m
+[7m[1m[36m NX [39m[22m[27m [1mFile change detected. Restarting...[22m
+[1m[31mBuild failed, waiting for changes to restart...[39m[22m
+[7m[1m[36m NX [39m[22m[27m [1mFile change detected. Restarting...[22m
+[7m[1m[36m NX [39m[22m[27m [1mFile change detected. Restarting...[22m
+[1m[31mBuild failed, waiting for changes to restart...[39m[22m
+[7m[1m[36m NX [39m[22m[27m [1mFile change detected. Restarting...[22m
+[7m[1m[36m NX [39m[22m[27m [1mFile change detected. Restarting...[22m
+[1m[31mBuild failed, waiting for changes to restart...[39m[22m
+[7m[1m[36m NX [39m[22m[27m [1mFile change detected. Restarting...[22m
+[1m[31mBuild failed, waiting for changes to restart...[39m[22m
+[7m[1m[36m NX [39m[22m[27m [1mFile change detected. Restarting...[22m
+[1m[31mBuild failed, waiting for changes to restart...[39m[22m
+[7m[1m[36m NX [39m[22m[27m [1mFile change detected. Restarting...[22m
+[1m[31mBuild failed, waiting for changes to restart...[39m[22m
+[7m[1m[36m NX [39m[22m[27m [1mFile change detected. Restarting...[22m
+[1m[31mBuild failed, waiting for changes to restart...[39m[22m
+[7m[1m[36m NX [39m[22m[27m [1mFile change detected. Restarting...[22m
+[1m[31mBuild failed, waiting for changes to restart...[39m[22m
+[7m[1m[36m NX [39m[22m[27m [1mFile change detected. Restarting...[22m
+[1m[31mBuild failed, waiting for changes to restart...[39m[22m
+[7m[1m[36m NX [39m[22m[27m [1mFile change detected. Restarting...[22m
+[1m[31mBuild failed, waiting for changes to restart...[39m[22m
+[7m[1m[36m NX [39m[22m[27m [1mFile change detected. Restarting...[22m
+[1m[31mBuild failed, waiting for changes to restart...[39m[22m
+[7m[1m[36m NX [39m[22m[27m [1mFile change detected. Restarting...[22m
+[1m[31mBuild failed, waiting for changes to restart...[39m[22m
+[7m[1m[36m NX [39m[22m[27m [1mFile change detected. Restarting...[22m
+[7m[1m[36m NX [39m[22m[27m [1mFile change detected. Restarting...[22m
+[1m[31mBuild failed, waiting for changes to restart...[39m[22m
+[7m[1m[36m NX [39m[22m[27m [1mFile change detected. Restarting...[22m
+[1m[31mBuild failed, waiting for changes to restart...[39m[22m
+[7m[1m[36m NX [39m[22m[27m [1mFile change detected. Restarting...[22m
+[7m[1m[36m NX [39m[22m[27m [1mFile change detected. Restarting...[22m
+[1m[31mBuild failed, waiting for changes to restart...[39m[22m
+[7m[1m[36m NX [39m[22m[27m [1mFile change detected. Restarting...[22m
+[1m[31mBuild failed, waiting for changes to restart...[39m[22m
+[7m[1m[36m NX [39m[22m[27m [1mFile change detected. Restarting...[22m
+[1m[31mBuild failed, waiting for changes to restart...[39m[22m
+[7m[1m[36m NX [39m[22m[27m [1mFile change detected. Restarting...[22m
+[7m[1m[36m NX [39m[22m[27m [1mFile change detected. Restarting...[22m
+[1m[31mBuild failed, waiting for changes to restart...[39m[22m
+[7m[1m[36m NX [39m[22m[27m [1mFile change detected. Restarting...[22m
+[1m[31mBuild failed, waiting for changes to restart...[39m[22m
+[7m[1m[36m NX [39m[22m[27m [1mFile change detected. Restarting...[22m
+[1m[31mBuild failed, waiting for changes to restart...[39m[22m
+[7m[1m[36m NX [39m[22m[27m [1mFile change detected. Restarting...[22m
+[1m[31mBuild failed, waiting for changes to restart...[39m[22m
+[7m[1m[36m NX [39m[22m[27m [1mFile change detected. Restarting...[22m
+[1m[31mBuild failed, waiting for changes to restart...[39m[22m
+[7m[1m[36m NX [39m[22m[27m [1mFile change detected. Restarting...[22m
+[7m[1m[36m NX [39m[22m[27m [1mFile change detected. Restarting...[22m
+[7m[1m[36m NX [39m[22m[27m [1mFile change detected. Restarting...[22m
+[7m[1m[36m NX [39m[22m[27m [1mFile change detected. Restarting...[22m
+[7m[1m[36m NX [39m[22m[27m [1mFile change detected. Restarting...[22m
+[7m[1m[36m NX [39m[22m[27m [1mProcess exited with code 3221225794, waiting for changes to restart...[22m
+[7m[1m[36m NX [39m[22m[27m [1mFile change detected. Restarting...[22m
+[1m[31mBuild failed, waiting for changes to restart...[39m[22m
+[7m[1m[36m NX [39m[22m[27m [1mFile change detected. Restarting...[22m
+[7m[1m[36m NX [39m[22m[27m [1mFile change detected. Restarting...[22m
+[1m[31mBuild failed, waiting for changes to restart...[39m[22m
+[7m[1m[36m NX [39m[22m[27m [1mFile change detected. Restarting...[22m
+[1m[31mBuild failed, waiting for changes to restart...[39m[22m
+[7m[1m[36m NX [39m[22m[27m [1mFile change detected. Restarting...[22m
+[7m[1m[36m NX [39m[22m[27m [1mFile change detected. Restarting...[22m
+[7m[1m[36m NX [39m[22m[27m [1mFile change detected. Restarting...[22m
+[7m[1m[36m NX [39m[22m[27m [1mProcess exited with code 3221225794, waiting for changes to restart...[22m
+[7m[1m[36m NX [39m[22m[27m [1mFile change detected. Restarting...[22m
+[1m[31mBuild failed, waiting for changes to restart...[39m[22m
+[7m[1m[36m NX [39m[22m[27m [1mFile change detected. Restarting...[22m
+[1m[31mBuild failed, waiting for changes to restart...[39m[22m
+[7m[1m[36m NX [39m[22m[27m [1mFile change detected. Restarting...[22m
+[1m[31mBuild failed, waiting for changes to restart...[39m[22m
+[7m[1m[36m NX [39m[22m[27m [1mFile change detected. Restarting...[22m
+[1m[31mBuild failed, waiting for changes to restart...[39m[22m
+[7m[1m[36m NX [39m[22m[27m [1mFile change detected. Restarting...[22m
+[7m[1m[36m NX [39m[22m[27m [1mFile change detected. Restarting...[22m
+[7m[1m[36m NX [39m[22m[27m [1mFile change detected. Restarting...[22m
+[7m[1m[36m NX [39m[22m[27m [1mFile change detected. Restarting...[22m
+[7m[1m[36m NX [39m[22m[27m [1mProcess exited with code 3221225794, waiting for changes to restart...[22m
+[7m[1m[36m NX [39m[22m[27m [1mProcess exited with code 3221225794, waiting for changes to restart...[22m
+[7m[1m[36m NX [39m[22m[27m [1mFile change detected. Restarting...[22m
+[1m[31mBuild failed, waiting for changes to restart...[39m[22m
+[7m[1m[36m NX [39m[22m[27m [1mFile change detected. Restarting...[22m
+[1m[31mBuild failed, waiting for changes to restart...[39m[22m
+[7m[1m[36m NX [39m[22m[27m [1mFile change detected. Restarting...[22m
+[1m[31mBuild failed, waiting for changes to restart...[39m[22m
+[7m[1m[36m NX [39m[22m[27m [1mFile change detected. Restarting...[22m
+[1m[31mBuild failed, waiting for changes to restart...[39m[22m
+[7m[1m[36m NX [39m[22m[27m [1mFile change detected. Restarting...[22m
+[1m[31mBuild failed, waiting for changes to restart...[39m[22m
+[7m[1m[36m NX [39m[22m[27m [1mFile change detected. Restarting...[22m
+[1m[31mBuild failed, waiting for changes to restart...[39m[22m
+[7m[1m[36m NX [39m[22m[27m [1mFile change detected. Restarting...[22m
+[1m[31mBuild failed, waiting for changes to restart...[39m[22m
+[7m[1m[36m NX [39m[22m[27m [1mFile change detected. Restarting...[22m
+[1m[31mBuild failed, waiting for changes to restart...[39m[22m
+[7m[1m[36m NX [39m[22m[27m [1mFile change detected. Restarting...[22m
+[1m[31mBuild failed, waiting for changes to restart...[39m[22m
+[7m[1m[36m NX [39m[22m[27m [1mFile change detected. Restarting...[22m
+[1m[31mBuild failed, waiting for changes to restart...[39m[22m

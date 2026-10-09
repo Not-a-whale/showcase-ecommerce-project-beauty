@@ -1,0 +1,19 @@
+[32m[Nest] 90072  - [39m06/25/2026, 1:24:18 AM [32m    LOG[39m [38;5;3m[NestFactory] [39m[32mStarting Nest application...[39m
+[32m[Nest] 90072  - [39m06/25/2026, 1:24:18 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mRedisModule dependencies initialized[39m[38;5;3m +13ms[39m
+[32m[Nest] 90072  - [39m06/25/2026, 1:24:18 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mAuthModule dependencies initialized[39m[38;5;3m +1ms[39m
+[32m[Nest] 90072  - [39m06/25/2026, 1:24:18 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mProductsModule dependencies initialized[39m[38;5;3m +1ms[39m
+[32m[Nest] 90072  - [39m06/25/2026, 1:24:18 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mOrdersModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 90072  - [39m06/25/2026, 1:24:18 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mWishlistModule dependencies initialized[39m[38;5;3m +1ms[39m
+[32m[Nest] 90072  - [39m06/25/2026, 1:24:18 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mNotificationsModule dependencies initialized[39m[38;5;3m +1ms[39m
+[32m[Nest] 90072  - [39m06/25/2026, 1:24:18 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mAdminModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 90072  - [39m06/25/2026, 1:24:18 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mAppModule dependencies initialized[39m[38;5;3m +1ms[39m
+[32m[Nest] 90072  - [39m06/25/2026, 1:24:19 AM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mAppController {/api}:[39m[38;5;3m +294ms[39m
+[32m[Nest] 90072  - [39m06/25/2026, 1:24:19 AM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/api, GET} route[39m[38;5;3m +4ms[39m
+[32m[Nest] 90072  - [39m06/25/2026, 1:24:19 AM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/api/health, GET} route[39m[38;5;3m +2ms[39m
+[32m[Nest] 90072  - [39m06/25/2026, 1:24:19 AM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mAuthController {/api/auth}:[39m[38;5;3m +1ms[39m
+[32m[Nest] 90072  - [39m06/25/2026, 1:24:19 AM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mProductsController {/api/products}:[39m[38;5;3m +0ms[39m
+[32m[Nest] 90072  - [39m06/25/2026, 1:24:19 AM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mOrdersController {/api/orders}:[39m[38;5;3m +1ms[39m
+[32m[Nest] 90072  - [39m06/25/2026, 1:24:19 AM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mWishlistController {/api/wishlist}:[39m[38;5;3m +0ms[39m
+[32m[Nest] 90072  - [39m06/25/2026, 1:24:19 AM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mNotificationsController {/api/notifications}:[39m[38;5;3m +1ms[39m
+[32m[Nest] 90072  - [39m06/25/2026, 1:24:19 AM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mAnalyticsController {/api/analytics}:[39m[38;5;3m +0ms[39m
+[32m[Nest] 90072  - [39m06/25/2026, 1:24:19 AM [32m    LOG[39m [38;5;3m[NestApplication] [39m[32mNest application successfully started[39m[38;5;3m +2ms[39m

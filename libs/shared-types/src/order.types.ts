@@ -109,5 +109,8 @@ export interface GiftCard {
   createdAt: string;
 }
 
-
-
+export interface StripeOrder {
+  orderId: string;
+  stripeChargeAmount: number;
+  userId: string;
+}

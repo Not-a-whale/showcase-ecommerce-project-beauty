@@ -1,4 +1,5 @@
 @host = http://localhost:3000/api
+@userToken = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIwYzEzYzEzOS1mMzY5LTRiNGQtOTRlNS1hYTBkZTkzZmY1NDIiLCJlbWFpbCI6ImFkbWluQHRlc3QuY29tIiwicm9sZSI6IkFETUlOIiwidG9rZW5WZXJzaW9uIjowLCJpYXQiOjE3OTE1Njc4NTAsImV4cCI6MTc5MTU2ODc1MH0.PhK-dALK6bxudVtSIyCmJ1oF_V8w1edEjI7wSnsvEHY
 
 ### ========================================
 ### AUTH — логин под разными ролями
@@ -201,10 +202,12 @@ GET {{host}}/products?categoryId=PASTE_CATEGORY_ID&sort=price_asc&limit=10
 GET {{host}}/products?sort=price_asc&limit=5
 
 ### Страница 2 — вставь nextCursor из страницы 1
-GET {{host}}/products?sort=price_asc&limit=5&cursor=PASTE_NEXT_CURSOR
+GET {{host}}/products?sort=price_asc&limit=5&
+    cursor=eyJ2YWx1ZSI6IjM0Ljk5IiwiaWQiOiI2NTgwMWFkOC01ZGFjLTQ5ZGEtOTUyOS05ZWVhNGZjODc2ZTgifQ==
 
 ### Страница 3 — вставь nextCursor из страницы 2
-GET {{host}}/products?sort=price_asc&limit=5&cursor=PASTE_NEXT_CURSOR
+GET {{host}}/products?sort=price_asc&limit=5&
+    cursor=eyJ2YWx1ZSI6IjM5Ljk5IiwiaWQiOiJlMzViYzUwNS1lZjRmLTRmZWYtOTEwNC01MGQ0YTVmNWMxZDMifQ==
 
 ### Tie-breaker тест — товары с ценой 50.00 на границах страниц
 ### Листай по 2, проверь что Identical Price Item не теряются и не дублируются
@@ -253,3 +256,139 @@ GET {{host}}/products?search=tee&sort=price_asc
 
 ### Поиск + фильтр + сортировка + лимит (всё вместе)
 GET {{host}}/products?search=dress&categoryId=PASTE_CATEGORY_ID&sort=price_asc&limit=5
+
+### ========================================
+### ORDERS
+### ========================================
+
+### Создать заказ — happy path (подставь реальный productId)
+POST {{host}}/orders
+Content-Type: application/json
+Authorization: Bearer {{userToken}}
+
+{
+  "items": [
+    {
+      "productId": "03fce43b-63bc-44d9-9a18-80b7ae748ddd",
+      "quantity": 1
+    }
+  ],
+  "shippingAddress": {
+    "street": "Main St 1",
+    "city": "Kyiv",
+    "state": "Kyiv",
+    "zipCode": "01001",
+    "country": "UA"
+  }
+}
+
+### Создать заказ — Suede Loafers (проверка order.created → payment_queue)
+POST {{host}}/orders
+Content-Type: application/json
+Authorization: Bearer {{userToken}}
+
+{
+  "items": [
+    {
+      "productId": "06b35e19-034a-4d2a-ab9f-63a56d06b394",
+      "quantity": 1
+    }
+  ],
+  "shippingAddress": {
+    "street": "Main St 4",
+    "city": "Kyiv",
+    "state": "Kyiv",
+    "zipCode": "01001",
+    "country": "UA"
+  }
+}
+
+### Заказ без токена → 401
+POST {{host}}/orders
+Content-Type: application/json
+
+{
+  "items": [
+    {
+      "productId": "03fce43b-63bc-44d9-9a18-80b7ae748ddd",
+      "quantity": 1
+    }
+  ],
+  "shippingAddress": {
+    "street": "x",
+    "city": "x",
+    "state": "x",
+    "zipCode": "1",
+    "country": "x"
+  }
+}
+
+### Заказ с quantity больше стока → 400
+POST {{host}}/orders
+Content-Type: application/json
+Authorization: Bearer {{userToken}}
+
+{
+  "items": [
+    {
+      "productId": "03fce43b-63bc-44d9-9a18-80b7ae748ddd",
+      "quantity": 999999
+    }
+  ],
+  "shippingAddress": {
+    "street": "x",
+    "city": "x",
+    "state": "x",
+    "zipCode": "1",
+    "country": "x"
+  }
+}
+
+### Заказ с несуществующим товаром → 404
+POST {{host}}/orders
+Content-Type: application/json
+Authorization: Bearer {{userToken}}
+
+{
+  "items": [
+    {
+      "productId": "00000000-0000-0000-0000-000000000000",
+      "quantity": 1
+    }
+  ],
+  "shippingAddress": {
+    "street": "x",
+    "city": "x",
+    "state": "x",
+    "zipCode": "1",
+    "country": "x"
+  }
+}
+
+### Атомарность — первый товар ок, второй превышает сток → 400, сток первого НЕ списался
+POST {{host}}/orders
+Content-Type: application/json
+Authorization: Bearer {{userToken}}
+
+{
+  "items": [
+    {
+      "productId": "<товар_A_есть>",
+      "quantity": 1
+    },
+    {
+      "productId": "<товар_B_мало>",
+      "quantity": 999999
+    }
+  ],
+  "shippingAddress": {
+    "street": "x",
+    "city": "x",
+    "state": "x",
+    "zipCode": "1",
+    "country": "x"
+  }
+}
+
+### Кэш не stale — сразу после заказа сток свежий (была вчерашняя проблема)
+GET {{host}}/products/03fce43b-63bc-44d9-9a18-80b7ae748ddd

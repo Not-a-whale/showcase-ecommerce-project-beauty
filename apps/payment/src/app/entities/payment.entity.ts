@@ -18,7 +18,7 @@ export class Payment {
   orderId: string;
 
   @Index()
-  @Column({ length: 255, unique: true, nullable: true })
+  @Column({ type: 'varchar', length: 255, unique: true, nullable: true })
   stripePaymentIntentId: string | null;
 
   @Column({ type: 'decimal', precision: 10, scale: 2 })
