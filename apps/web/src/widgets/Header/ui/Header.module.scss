@@ -1,0 +1,530 @@
+.root {
+  position: relative;
+  z-index: 30;
+  display: flex;
+  flex-direction: column;
+  inline-size: 100%;
+  background: var(--surface);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  font-size: 16px;
+  line-height: 24px;
+}
+
+/* ── top row ─────────────────────────────────────────────── */
+.top {
+  display: flex;
+  justify-content: space-between;
+  inline-size: 100%;
+  padding-block: 36px 0;
+  padding-inline: 8.5%;
+}
+
+.left {
+  display: flex;
+}
+
+.disclosure {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  inline-size: 136px;
+  block-size: 42px;
+  padding-block: 8px;
+  padding-inline: 16px 15px;
+  border: 1px solid var(--border);
+  border-radius: 0;
+  background: var(--background);
+  color: var(--foreground);
+  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  cursor: pointer;
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  margin-inline-start: 50px;
+  padding: 0;
+  border: 0;
+  background: none;
+  cursor: pointer;
+}
+
+.themeSlot {
+  display: flex;
+  align-items: center;
+  margin-inline-start: 50px;
+}
+
+.center {
+  position: absolute;
+  inset-inline-start: 50%;
+  inset-block-start: 36px;
+  transform: translateX(-50%);
+}
+
+.logo {
+  display: block;
+  inline-size: 144px;
+  block-size: 35px;
+}
+
+.right {
+  display: flex;
+  align-items: center;
+}
+
+.flag {
+  display: flex;
+  align-items: center;
+  margin-inline-end: 50px;
+}
+
+.group {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.flagImg {
+  margin-inline-end: 12px;
+}
+
+.flagTxt {
+  font-family: var(--font-sans);
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.logging {
+  display: flex;
+  align-items: center;
+}
+
+.link {
+  font-family: var(--font-accent);
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--foreground);
+  text-decoration: none;
+  background: none;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+}
+
+.loginLink {
+  composes: link;
+  text-decoration: underline;
+  padding-inline-end: 7px;
+}
+
+.signupLink {
+  composes: link;
+  text-decoration: underline;
+  padding-inline-start: 7px;
+}
+
+.slash {
+  font-family: var(--font-sans);
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.account {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.accountBtn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: var(--foreground);
+  cursor: pointer;
+}
+
+.accountMenu {
+  position: absolute;
+  inset-inline-end: 0;
+  inset-block-start: calc(100% + 12px);
+  z-index: 40;
+  display: flex;
+  flex-direction: column;
+  min-inline-size: 160px;
+  padding-block: 6px;
+  background: var(--background);
+  border: 1px solid var(--border);
+  box-shadow: 0 8px 24px rgb(0 0 0 / 0.08);
+}
+
+.accountItem {
+  composes: link;
+  display: block;
+  inline-size: 100%;
+  padding-block: 12px;
+  padding-inline: 16px;
+  text-align: start;
+
+  &:hover {
+    background: var(--surface);
+  }
+}
+
+.cart {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 0;
+  border: 0;
+  background: none;
+  cursor: pointer;
+}
+
+.cartNum {
+  position: absolute;
+  inset-block-start: 7px;
+  inset-inline-end: -3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  inline-size: 12px;
+  block-size: 12px;
+  border-radius: 50%;
+  background: var(--accent);
+  color: var(--foreground);
+  font-family: var(--font-accent);
+  font-size: 9px;
+  line-height: 8px;
+}
+
+/* ── bottom row (desktop nav) ────────────────────────────── */
+.bottom {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.menuItem {
+  padding: 16px;
+  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  line-height: 24px;
+  cursor: pointer;
+}
+
+.menuArrow {
+  display: inline-block;
+  vertical-align: middle;
+  margin-inline-start: 4px;
+}
+
+/* ── desktop dropdown ────────────────────────────────────── */
+.dropdown {
+  position: absolute;
+  inset-inline-start: 0;
+  inset-block-start: calc(100% - 4px);
+  inline-size: 100%;
+  z-index: 9;
+  background: var(--surface);
+}
+
+.dropdownWrap {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  inline-size: 100%;
+  margin-inline: -48px;
+  padding-inline: 25px;
+}
+
+.dropdownItem {
+  padding-block: 12px 30px;
+  padding-inline: 32px;
+}
+
+.dropdownItemPicks {
+  padding-inline-end: 64px;
+}
+
+.dropdownItemSecond {
+  padding-inline-start: 0;
+}
+
+.dropdownList {
+  display: flex;
+  flex-direction: column;
+  margin: 23px 0 0;
+  padding: 0;
+  padding-inline-end: 32px;
+  list-style: none;
+
+  li {
+    line-height: 24px;
+  }
+}
+
+.dropdownListPicks {
+  margin-block-start: 0;
+  padding-inline-end: 64px;
+  block-size: 140px;
+  border-inline-end: 1px solid var(--primary);
+}
+
+.dropdownHeading {
+  composes: link;
+}
+
+.dropdownSmall {
+  font-family: var(--font-accent);
+  font-size: 13px;
+  line-height: 16px;
+  letter-spacing: 1px;
+  text-transform: capitalize;
+  color: var(--foreground);
+  text-decoration: none;
+}
+
+/* ── mobile-only bits (hidden on desktop) ───────────────── */
+.trigger {
+  display: none;
+  inline-size: 30px;
+  block-size: 30px;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: var(--foreground);
+  cursor: pointer;
+}
+
+.loggingMobile,
+.flagMobile,
+.searchRow {
+  display: none;
+}
+
+/* ── tablet ≤1024 ────────────────────────────────────────── */
+@media (max-width: 1024px) {
+  .flag,
+  .logging,
+  .nav {
+    display: none;
+  }
+
+  .bottom {
+    justify-content: space-between;
+    padding-block: 20px;
+    padding-inline: 8.5%;
+  }
+
+  .triggerBottom {
+    display: block;
+  }
+
+  .loggingMobile {
+    display: flex;
+    align-items: center;
+    margin-inline: 50px 0;
+  }
+
+  .flagMobile {
+    display: flex;
+    align-items: center;
+  }
+}
+
+/* ── mobile ≤767 ─────────────────────────────────────────── */
+@media (max-width: 767px) {
+  .triggerTop {
+    display: block;
+  }
+
+  .bottom,
+  .left {
+    display: none;
+  }
+
+  .top {
+    padding-block: 10px;
+  }
+
+  .center {
+    position: static;
+    transform: none;
+    display: flex;
+    align-items: center;
+  }
+
+  .searchRow {
+    display: flex;
+    justify-content: flex-end;
+    padding-block: 0 15px;
+    padding-inline: 8.5%;
+  }
+}
+
+/* ── mobile overlay menu ─────────────────────────────────── */
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 110;
+  background: rgb(0 0 0 / 0.4);
+}
+
+.panel {
+  position: relative;
+  min-block-size: 100vh;
+  inline-size: 80%;
+  max-inline-size: 400px;
+  overflow: hidden;
+  background: var(--background);
+  box-shadow: 2px 0 10px -2px #888;
+}
+
+.panelTop {
+  display: flex;
+  justify-content: space-between;
+}
+
+.panelTopLink {
+  display: block;
+  padding: 32px 16px;
+  font-family: var(--font-accent);
+  font-size: 13px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--foreground);
+  background: none;
+  border: 0;
+  cursor: pointer;
+}
+
+.panelList {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  li {
+    line-height: 1.3;
+  }
+}
+
+.panelLink {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  inline-size: 100%;
+  padding-block: 20px;
+  padding-inline: 15px 35px;
+  font-family: var(--font-accent);
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-align: start;
+  color: var(--foreground);
+  text-decoration: none;
+  background: none;
+  border: 0;
+  cursor: pointer;
+}
+
+.chev {
+  flex-shrink: 0;
+}
+
+.chevBack {
+  transform: rotate(180deg);
+}
+
+.panelBottom {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px;
+
+  .disclosure {
+    margin: 0;
+  }
+}
+
+.cross {
+  position: absolute;
+  inset-inline-start: 420px;
+  inset-block-start: 20px;
+  z-index: 12000;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: #fff;
+  cursor: pointer;
+}
+
+@media (max-width: 600px) {
+  .cross {
+    inset-inline-start: 87%;
+  }
+}
+
+/* ── search screen ───────────────────────────────────────── */
+.searchScreen {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  display: flex;
+  flex-direction: column;
+  background: var(--background);
+}
+
+.searchBlock {
+  position: relative;
+  display: flex;
+  align-items: center;
+  inline-size: 100%;
+  block-size: 100px;
+}
+
+.searchInput {
+  inline-size: 100%;
+  max-inline-size: 90%;
+  block-size: 50px;
+  margin: 10px;
+  border: 0;
+  outline: 0;
+  background: none;
+  font-size: 22px;
+  color: var(--foreground);
+}
+
+.searchClose {
+  position: absolute;
+  inset-inline-end: 30px;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: var(--foreground);
+  cursor: pointer;
+}

@@ -54,7 +54,7 @@ export class AuthController {
 
   @Get('me')
   async getMe(@CurrentUser() user: JwtPayload) {
-    return user;
+    return this.authService.getProfile(user.userId);
   }
 
   @Post('change-password')

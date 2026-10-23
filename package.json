@@ -11,7 +11,8 @@
     "migration:show": "node --require @swc-node/register --require tsconfig-paths/register node_modules/typeorm/cli.js migration:show -d apps/api/src/data-source.ts",
     "payment:migration:run": "node --require @swc-node/register --require tsconfig-paths/register node_modules/typeorm/cli.js migration:run -d apps/payment/src/data-source.ts",
     "payment:migration:revert": "node --require @swc-node/register --require tsconfig-paths/register node_modules/typeorm/cli.js migration:revert -d apps/payment/src/data-source.ts",
-    "payment:migration:show": "node --require @swc-node/register --require tsconfig-paths/register node_modules/typeorm/cli.js migration:show -d apps/payment/src/data-source.ts"
+    "payment:migration:show": "node --require @swc-node/register --require tsconfig-paths/register node_modules/typeorm/cli.js migration:show -d apps/payment/src/data-source.ts",
+    "dev:all": "concurrently -k -n api,payment,web -c blue,magenta,green \"nx serve api\" \"nx serve @ecommerce/payment\" \"nx dev @ecommerce/web --port 3100\""
   },
   "private": true,
   "devDependencies": {
@@ -38,6 +39,7 @@
     "@swc/core": "~1.15.5",
     "@swc/helpers": "~0.5.18",
     "@swc/register": "^0.1.10",
+    "@tailwindcss/postcss": "^4.3.3",
     "@types/bcrypt": "^6.0.0",
     "@types/cookie-parser": "^1.4.10",
     "@types/node": "20.19.9",
@@ -51,6 +53,8 @@
     "jsonc-eslint-parser": "^2.1.0",
     "nx": "22.7.2",
     "prettier": "~3.6.2",
+    "sass": "^1.105.1",
+    "tailwindcss": "^4.3.3",
     "tslib": "^2.3.0",
     "typescript": "~5.9.2",
     "typescript-eslint": "^8.40.0",
@@ -75,6 +79,8 @@
     "@nestjs/swagger": "^11.4.3",
     "@nestjs/throttler": "^6.5.0",
     "@nestjs/typeorm": "^11.0.1",
+    "@tanstack/react-query": "^5.104.1",
+    "@tanstack/react-virtual": "^3.14.14",
     "amqp-connection-manager": "^5.0.0",
     "amqplib": "^2.0.1",
     "axios": "^1.6.0",
@@ -82,6 +88,7 @@
     "class-transformer": "^0.5.1",
     "class-validator": "^0.15.1",
     "cookie-parser": "^1.4.7",
+    "framer-motion": "^14.1.0",
     "ioredis": "^5.10.1",
     "next": "~16.1.6",
     "passport": "^0.7.0",
@@ -93,6 +100,8 @@
     "rxjs": "^7.8.0",
     "stripe": "^22.6.2",
     "swagger-ui-express": "^5.0.1",
-    "typeorm": "^0.3.29"
+    "swiper": "^14.3.0",
+    "typeorm": "^0.3.29",
+    "zustand": "^5.0.15"
   }
 }

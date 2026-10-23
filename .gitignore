@@ -53,3 +53,13 @@ vitest.config.*.timestamp*
 
 .env
 .env.example
+# frontend local env + logs
+.env*.local
+*.log
+!.env.example
+
+Beauty-main
+./Beauty-main/*
+
+# temp copy of legacy site for visual diff
+apps/web/public/_old/

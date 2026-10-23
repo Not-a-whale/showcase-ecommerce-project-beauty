@@ -9,7 +9,7 @@ import { JwtService } from '@nestjs/jwt';
 import type { Response } from 'express';
 import ms, { type StringValue } from 'ms';
 import { ConfigService } from '@nestjs/config';
-import { AuthResponseDto } from './dto/auth-response.dto';
+import { AuthResponseDto, UserResponseDto } from './dto/auth-response.dto';
 import { plainToInstance } from 'class-transformer';
 import { RedisService } from '../redis/redis.service';
 
@@ -227,5 +227,15 @@ export class AuthService {
     response.clearCookie('refreshToken');
     // 7. вернуть новую пару ИЛИ просто { success: true }
     return { success: true };
+  }
+
+  async getProfile(userId: string): Promise<UserResponseDto> {
+    const user = await this.userRepo.findOne({ where: { id: userId } });
+    if (!user) {
+      throw new UnauthorizedException('User not found');
+    }
+    return plainToInstance(UserResponseDto, user, {
+      excludeExtraneousValues: true,
+    });
   }
 }
