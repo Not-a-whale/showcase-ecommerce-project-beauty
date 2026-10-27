@@ -1,0 +1,737 @@
+{
+  "bright-blush-powder": [
+    "/products/bright-blush-powder/1.jpg",
+    "/products/bright-blush-powder/2.jpg"
+  ],
+  "luxe-face-cream": [
+    "/products/luxe-face-cream/1.jpg",
+    "/products/luxe-face-cream/2.jpg"
+  ],
+  "astro-space-lipstick": [
+    "/products/astro-space-lipstick/1.jpg",
+    "/products/astro-space-lipstick/2.jpg"
+  ],
+  "sera-perfume": [
+    "/products/sera-perfume/1.jpg",
+    "/products/sera-perfume/2.jpg",
+    "/products/sera-perfume/3.jpg"
+  ],
+  "bloom-no-2": [
+    "/products/bloom-no-2/1.jpg",
+    "/products/bloom-no-2/2.jpg",
+    "/products/bloom-no-2/3.jpg"
+  ],
+  "oat-and-juniper-hand-cream": [
+    "/products/oat-and-juniper-hand-cream/1.jpg",
+    "/products/oat-and-juniper-hand-cream/2.jpg",
+    "/products/oat-and-juniper-hand-cream/3.jpg"
+  ],
+  "base-concealer": [
+    "/products/base-concealer/1.jpg",
+    "/products/base-concealer/2.jpg"
+  ],
+  "base-concealer-light": [
+    "/products/base-concealer-light/1.jpg",
+    "/products/base-concealer-light/2.jpg"
+  ],
+  "dolce-and-gabbana-light-blue-eau-de-toilette": [
+    "/products/dolce-and-gabbana-light-blue-eau-de-toilette/1.jpg",
+    "/products/dolce-and-gabbana-light-blue-eau-de-toilette/2.jpg"
+  ],
+  "versace-bright-crystal-eau-de-toilette": [
+    "/products/versace-bright-crystal-eau-de-toilette/1.jpg",
+    "/products/versace-bright-crystal-eau-de-toilette/2.jpg"
+  ],
+  "versace-eros-eau-de-toilette": [
+    "/products/versace-eros-eau-de-toilette/1.jpg",
+    "/products/versace-eros-eau-de-toilette/2.png"
+  ],
+  "calvin-klein-euphoria-eau-de-parfum": [
+    "/products/calvin-klein-euphoria-eau-de-parfum/1.jpg",
+    "/products/calvin-klein-euphoria-eau-de-parfum/2.png"
+  ],
+  "armaf-club-de-nuit-intense-eau-de-toilette": [
+    "/products/armaf-club-de-nuit-intense-eau-de-toilette/1.jpg",
+    "/products/armaf-club-de-nuit-intense-eau-de-toilette/2.png"
+  ],
+  "giorgio-armani-acqua-di-gio-eau-de-toilette": [
+    "/products/giorgio-armani-acqua-di-gio-eau-de-toilette/1.jpg",
+    "/products/giorgio-armani-acqua-di-gio-eau-de-toilette/2.png"
+  ],
+  "creed-aventus-eau-de-parfum": [
+    "/products/creed-aventus-eau-de-parfum/1.jpg",
+    "/products/creed-aventus-eau-de-parfum/2.png"
+  ],
+  "viva-la-juicy-eau-de-parfum": [
+    "/products/viva-la-juicy-eau-de-parfum/1.jpg",
+    "/products/viva-la-juicy-eau-de-parfum/2.png"
+  ],
+  "davidoff-cool-water-eau-de-toilette": [
+    "/products/davidoff-cool-water-eau-de-toilette/1.jpg",
+    "/products/davidoff-cool-water-eau-de-toilette/2.jpg"
+  ],
+  "burberry-eau-de-parfum": [
+    "/products/burberry-eau-de-parfum/1.jpg",
+    "/products/burberry-eau-de-parfum/2.png"
+  ],
+  "burberry-touch-eau-de-toilette": [
+    "/products/burberry-touch-eau-de-toilette/1.jpg",
+    "/products/burberry-touch-eau-de-toilette/2.jpg"
+  ],
+  "calvin-klein-ck-one-eau-de-toilette": [
+    "/products/calvin-klein-ck-one-eau-de-toilette/1.jpg",
+    "/products/calvin-klein-ck-one-eau-de-toilette/2.jpg"
+  ],
+  "versace-dylan-blue-eau-de-toilette": [
+    "/products/versace-dylan-blue-eau-de-toilette/1.jpg",
+    "/products/versace-dylan-blue-eau-de-toilette/2.jpg"
+  ],
+  "calvin-klein-obsession-eau-de-toilette": [
+    "/products/calvin-klein-obsession-eau-de-toilette/1.jpg",
+    "/products/calvin-klein-obsession-eau-de-toilette/2.png"
+  ],
+  "clinique-happy-eau-de-parfum": [
+    "/products/clinique-happy-eau-de-parfum/1.jpg",
+    "/products/clinique-happy-eau-de-parfum/2.png"
+  ],
+  "dior-sauvage-eau-de-toilette": [
+    "/products/dior-sauvage-eau-de-toilette/1.jpg",
+    "/products/dior-sauvage-eau-de-toilette/2.jpg"
+  ],
+  "dolce-and-gabbana-light-blue-eau-de-toilette-for-men": [
+    "/products/dolce-and-gabbana-light-blue-eau-de-toilette-for-men/1.jpg",
+    "/products/dolce-and-gabbana-light-blue-eau-de-toilette-for-men/2.jpg"
+  ],
+  "mont-blanc-explorer-eau-de-parfum": [
+    "/products/mont-blanc-explorer-eau-de-parfum/1.jpg",
+    "/products/mont-blanc-explorer-eau-de-parfum/2.png"
+  ],
+  "exceptional-because-you-are-eau-de-toilette": [
+    "/products/exceptional-because-you-are-eau-de-toilette/1.jpg",
+    "/products/exceptional-because-you-are-eau-de-toilette/2.png"
+  ],
+  "azzaro-chrome-eau-de-toilette": [
+    "/products/azzaro-chrome-eau-de-toilette/1.jpg",
+    "/products/azzaro-chrome-eau-de-toilette/2.png"
+  ],
+  "calvin-klein-eternity-eau-de-toilette": [
+    "/products/calvin-klein-eternity-eau-de-toilette/1.jpg",
+    "/products/calvin-klein-eternity-eau-de-toilette/2.png"
+  ],
+  "estee-lauder-pleasures-eau-de-parfum": [
+    "/products/estee-lauder-pleasures-eau-de-parfum/1.jpg",
+    "/products/estee-lauder-pleasures-eau-de-parfum/2.png"
+  ],
+  "nautica-voyage-eau-de-toilette": [
+    "/products/nautica-voyage-eau-de-toilette/1.jpg",
+    "/products/nautica-voyage-eau-de-toilette/2.png"
+  ],
+  "guy-laroche-drakkar-noir-eau-de-toilette": [
+    "/products/guy-laroche-drakkar-noir-eau-de-toilette/1.jpg",
+    "/products/guy-laroche-drakkar-noir-eau-de-toilette/2.png"
+  ],
+  "armaf-club-de-nuit-intense-eau-de-parfum": [
+    "/products/armaf-club-de-nuit-intense-eau-de-parfum/1.jpg",
+    "/products/armaf-club-de-nuit-intense-eau-de-parfum/2.png"
+  ],
+  "burberry-brit-eau-de-parfum": [
+    "/products/burberry-brit-eau-de-parfum/1.jpg",
+    "/products/burberry-brit-eau-de-parfum/2.png"
+  ],
+  "lattafa-yara-eau-de-parfum": [
+    "/products/lattafa-yara-eau-de-parfum/1.jpg",
+    "/products/lattafa-yara-eau-de-parfum/2.jpg"
+  ],
+  "bujairami-hectic-extrait-de-parfum": [
+    "/products/bujairami-hectic-extrait-de-parfum/1.jpg",
+    "/products/bujairami-hectic-extrait-de-parfum/2.png"
+  ],
+  "ralph-lauren-romance-eau-de-parfum": [
+    "/products/ralph-lauren-romance-eau-de-parfum/1.jpg",
+    "/products/ralph-lauren-romance-eau-de-parfum/2.png"
+  ],
+  "lattafa-khamrah-eau-de-parfum": [
+    "/products/lattafa-khamrah-eau-de-parfum/1.jpg",
+    "/products/lattafa-khamrah-eau-de-parfum/2.jpg"
+  ],
+  "jimmy-choo-i-want-choo-eau-de-parfum": [
+    "/products/jimmy-choo-i-want-choo-eau-de-parfum/1.jpg",
+    "/products/jimmy-choo-i-want-choo-eau-de-parfum/2.jpg"
+  ],
+  "burberry-goddess-eau-de-parfum": [
+    "/products/burberry-goddess-eau-de-parfum/1.jpg",
+    "/products/burberry-goddess-eau-de-parfum/2.png"
+  ],
+  "clinique-happy-heart-parfum": [
+    "/products/clinique-happy-heart-parfum/1.jpg",
+    "/products/clinique-happy-heart-parfum/2.png"
+  ],
+  "emporio-armani-stronger-with-you-intensely-eau-de-parfum": [
+    "/products/emporio-armani-stronger-with-you-intensely-eau-de-parfum/1.jpg",
+    "/products/emporio-armani-stronger-with-you-intensely-eau-de-parfum/2.jpg"
+  ],
+  "encre-noire-lalique-eau-de-toilette": [
+    "/products/encre-noire-lalique-eau-de-toilette/1.jpg",
+    "/products/encre-noire-lalique-eau-de-toilette/2.jpg"
+  ],
+  "burberry-her-eau-de-parfum": [
+    "/products/burberry-her-eau-de-parfum/1.jpg",
+    "/products/burberry-her-eau-de-parfum/2.png"
+  ],
+  "valentino-donna-born-in-roma-eau-de-parfum": [
+    "/products/valentino-donna-born-in-roma-eau-de-parfum/1.jpg",
+    "/products/valentino-donna-born-in-roma-eau-de-parfum/2.png"
+  ],
+  "parfums-de-marly-layton-eau-de-parfum": [
+    "/products/parfums-de-marly-layton-eau-de-parfum/1.jpg",
+    "/products/parfums-de-marly-layton-eau-de-parfum/2.png"
+  ],
+  "myslf-yves-saint-laurent-eau-de-parfum": [
+    "/products/myslf-yves-saint-laurent-eau-de-parfum/1.jpg",
+    "/products/myslf-yves-saint-laurent-eau-de-parfum/2.png"
+  ],
+  "valentino-uomo-born-in-roma-eau-de-toilette": [
+    "/products/valentino-uomo-born-in-roma-eau-de-toilette/1.jpg",
+    "/products/valentino-uomo-born-in-roma-eau-de-toilette/2.jpg"
+  ],
+  "lattafa-asad-eau-de-parfum": [
+    "/products/lattafa-asad-eau-de-parfum/1.jpg",
+    "/products/lattafa-asad-eau-de-parfum/2.png"
+  ],
+  "azzaro-the-most-wanted-eau-de-parfum-intense": [
+    "/products/azzaro-the-most-wanted-eau-de-parfum-intense/1.jpg",
+    "/products/azzaro-the-most-wanted-eau-de-parfum-intense/2.png"
+  ],
+  "afnan-9-pm-eau-de-parfum": [
+    "/products/afnan-9-pm-eau-de-parfum/1.jpg",
+    "/products/afnan-9-pm-eau-de-parfum/2.png"
+  ],
+  "lattafa-eclaire-eau-de-parfum": [
+    "/products/lattafa-eclaire-eau-de-parfum/1.jpg",
+    "/products/lattafa-eclaire-eau-de-parfum/2.png"
+  ],
+  "azzaro-the-most-wanted-parfum": [
+    "/products/azzaro-the-most-wanted-parfum/1.jpg",
+    "/products/azzaro-the-most-wanted-parfum/2.png"
+  ],
+  "dana-loves-baby-soft-cologne": [
+    "/products/dana-loves-baby-soft-cologne/1.jpg",
+    "/products/dana-loves-baby-soft-cologne/2.png"
+  ],
+  "rasasi-hawas-for-him-eau-de-parfum": [
+    "/products/rasasi-hawas-for-him-eau-de-parfum/1.jpg",
+    "/products/rasasi-hawas-for-him-eau-de-parfum/2.png"
+  ],
+  "clinique-aromatics-elixir-body-smoother": [
+    "/products/clinique-aromatics-elixir-body-smoother/1.jpg",
+    "/products/clinique-aromatics-elixir-body-smoother/2.png"
+  ],
+  "elizabeth-taylor-white-diamonds-body-powder": [
+    "/products/elizabeth-taylor-white-diamonds-body-powder/1.jpg",
+    "/products/elizabeth-taylor-white-diamonds-body-powder/2.png"
+  ],
+  "lattafa-pride-vintage-radio-eau-de-parfum": [
+    "/products/lattafa-pride-vintage-radio-eau-de-parfum/1.jpg",
+    "/products/lattafa-pride-vintage-radio-eau-de-parfum/2.png"
+  ],
+  "elizabeth-arden-red-door-body-powder": [
+    "/products/elizabeth-arden-red-door-body-powder/1.jpg",
+    "/products/elizabeth-arden-red-door-body-powder/2.png"
+  ],
+  "rasasi-hawas-ice-eau-de-parfum": [
+    "/products/rasasi-hawas-ice-eau-de-parfum/1.jpg",
+    "/products/rasasi-hawas-ice-eau-de-parfum/2.jpg"
+  ],
+  "lattafa-teriaq-intense-eau-de-parfum": [
+    "/products/lattafa-teriaq-intense-eau-de-parfum/1.jpg",
+    "/products/lattafa-teriaq-intense-eau-de-parfum/2.png"
+  ],
+  "french-avenue-liquid-brun-eau-de-parfum": [
+    "/products/french-avenue-liquid-brun-eau-de-parfum/1.jpg",
+    "/products/french-avenue-liquid-brun-eau-de-parfum/2.png"
+  ],
+  "stetson-aftershave": [
+    "/products/stetson-aftershave/1.jpg",
+    "/products/stetson-aftershave/2.png"
+  ],
+  "calvin-klein-obsession-aftershave": [
+    "/products/calvin-klein-obsession-aftershave/1.jpg",
+    "/products/calvin-klein-obsession-aftershave/2.png"
+  ],
+  "lattafa-asad-bourbon-eau-de-parfum": [
+    "/products/lattafa-asad-bourbon-eau-de-parfum/1.jpg",
+    "/products/lattafa-asad-bourbon-eau-de-parfum/2.png"
+  ],
+  "paris-corner-rifaaqat-eau-de-parfum": [
+    "/products/paris-corner-rifaaqat-eau-de-parfum/1.jpg",
+    "/products/paris-corner-rifaaqat-eau-de-parfum/2.png"
+  ],
+  "calvin-klein-eternity-aftershave": [
+    "/products/calvin-klein-eternity-aftershave/1.jpg",
+    "/products/calvin-klein-eternity-aftershave/2.png"
+  ],
+  "elizabeth-arden-visible-difference-refining-moisture-cream-complex": [
+    "/products/elizabeth-arden-visible-difference-refining-moisture-cream-complex/1.jpg",
+    "/products/elizabeth-arden-visible-difference-refining-moisture-cream-complex/2.png"
+  ],
+  "clinique-dramatically-different-moisturising-lotion": [
+    "/products/clinique-dramatically-different-moisturising-lotion/1.jpg",
+    "/products/clinique-dramatically-different-moisturising-lotion/2.png"
+  ],
+  "clarins-double-serum-complete-age-control-concentrate": [
+    "/products/clarins-double-serum-complete-age-control-concentrate/1.jpg"
+  ],
+  "obagi-nu-cil-eyelash-enhancing-serum": [
+    "/products/obagi-nu-cil-eyelash-enhancing-serum/1.jpg",
+    "/products/obagi-nu-cil-eyelash-enhancing-serum/2.png"
+  ],
+  "clarins-hand-and-nail-treatment-cream": [
+    "/products/clarins-hand-and-nail-treatment-cream/1.jpg",
+    "/products/clarins-hand-and-nail-treatment-cream/2.png"
+  ],
+  "prescription-skin-labs-eye-lift-serum": [
+    "/products/prescription-skin-labs-eye-lift-serum/1.jpg",
+    "/products/prescription-skin-labs-eye-lift-serum/2.png"
+  ],
+  "nuxe-huile-prodigieuse-florale-multi-purpose-dry-oil-for-all-skin-type": [
+    "/products/nuxe-huile-prodigieuse-florale-multi-purpose-dry-oil-for-all-skin-type/1.jpg",
+    "/products/nuxe-huile-prodigieuse-florale-multi-purpose-dry-oil-for-all-skin-type/2.png"
+  ],
+  "elizabeth-arden-ceramide-capsules-daily-youth-restoring-serum": [
+    "/products/elizabeth-arden-ceramide-capsules-daily-youth-restoring-serum/1.jpg",
+    "/products/elizabeth-arden-ceramide-capsules-daily-youth-restoring-serum/2.png"
+  ],
+  "estee-lauder-advanced-night-repair-synchronized-multi-recovery-complex": [
+    "/products/estee-lauder-advanced-night-repair-synchronized-multi-recovery-complex/1.jpg",
+    "/products/estee-lauder-advanced-night-repair-synchronized-multi-recovery-complex/2.png"
+  ],
+  "clinique-clarifying-lotion-2": [
+    "/products/clinique-clarifying-lotion-2/1.jpg",
+    "/products/clinique-clarifying-lotion-2/2.png"
+  ],
+  "strivectin-tl-advanced-tightening-neck-cream-plus": [
+    "/products/strivectin-tl-advanced-tightening-neck-cream-plus/1.jpg",
+    "/products/strivectin-tl-advanced-tightening-neck-cream-plus/2.png"
+  ],
+  "elizabeth-arden-millenium-night-renewal-cream": [
+    "/products/elizabeth-arden-millenium-night-renewal-cream/1.jpg",
+    "/products/elizabeth-arden-millenium-night-renewal-cream/2.png"
+  ],
+  "obagi-nu-derm-clear-skin-bleaching-and-corrector-cream": [
+    "/products/obagi-nu-derm-clear-skin-bleaching-and-corrector-cream/1.jpg",
+    "/products/obagi-nu-derm-clear-skin-bleaching-and-corrector-cream/2.png"
+  ],
+  "elemis-pro-collagen-marine-cream": [
+    "/products/elemis-pro-collagen-marine-cream/1.jpg",
+    "/products/elemis-pro-collagen-marine-cream/2.png"
+  ],
+  "strivectin-anti-wrinkle-intensive-eye-concentrate-for-wrinkles": [
+    "/products/strivectin-anti-wrinkle-intensive-eye-concentrate-for-wrinkles/1.jpg",
+    "/products/strivectin-anti-wrinkle-intensive-eye-concentrate-for-wrinkles/2.png"
+  ],
+  "clarins-total-eye-lift-concentrate": [
+    "/products/clarins-total-eye-lift-concentrate/1.jpg",
+    "/products/clarins-total-eye-lift-concentrate/2.png"
+  ],
+  "clinique-moisture-surge-100h-auto-replenishing-hydrator": [
+    "/products/clinique-moisture-surge-100h-auto-replenishing-hydrator/1.jpg",
+    "/products/clinique-moisture-surge-100h-auto-replenishing-hydrator/2.png"
+  ],
+  "elizabeth-arden-visible-difference-special-moisture-formula-for-body-c": [
+    "/products/elizabeth-arden-visible-difference-special-moisture-formula-for-body-c/1.jpg",
+    "/products/elizabeth-arden-visible-difference-special-moisture-formula-for-body-c/2.png"
+  ],
+  "clarins-face-treatment-oil": [
+    "/products/clarins-face-treatment-oil/1.jpg"
+  ],
+  "clarins-men-active-face-wash": [
+    "/products/clarins-men-active-face-wash/1.jpg",
+    "/products/clarins-men-active-face-wash/2.png"
+  ],
+  "dr-dennis-gross-alpha-beta-extra-strength-daily-peel": [
+    "/products/dr-dennis-gross-alpha-beta-extra-strength-daily-peel/1.jpg",
+    "/products/dr-dennis-gross-alpha-beta-extra-strength-daily-peel/2.png"
+  ],
+  "clarins-double-serum-eye-global-age-control-concentrate": [
+    "/products/clarins-double-serum-eye-global-age-control-concentrate/1.jpg",
+    "/products/clarins-double-serum-eye-global-age-control-concentrate/2.png"
+  ],
+  "shiseido-men-total-revitalizer-cream": [
+    "/products/shiseido-men-total-revitalizer-cream/1.jpg",
+    "/products/shiseido-men-total-revitalizer-cream/2.png"
+  ],
+  "shiseido-benefiance-wrinkle-smoothing-eye-cream": [
+    "/products/shiseido-benefiance-wrinkle-smoothing-eye-cream/1.jpg",
+    "/products/shiseido-benefiance-wrinkle-smoothing-eye-cream/2.png"
+  ],
+  "elizabeth-arden-millenium-eye-renewal-cream": [
+    "/products/elizabeth-arden-millenium-eye-renewal-cream/1.jpg",
+    "/products/elizabeth-arden-millenium-eye-renewal-cream/2.png"
+  ],
+  "elizabeth-arden-perpetual-moisture-24-cream": [
+    "/products/elizabeth-arden-perpetual-moisture-24-cream/1.jpg",
+    "/products/elizabeth-arden-perpetual-moisture-24-cream/2.png"
+  ],
+  "obagi-hydrate-facial-moisturizer": [
+    "/products/obagi-hydrate-facial-moisturizer/1.jpg",
+    "/products/obagi-hydrate-facial-moisturizer/2.png"
+  ],
+  "clinique-moisture-surge-intense-72h-lipid-replenishing-hydrator": [
+    "/products/clinique-moisture-surge-intense-72h-lipid-replenishing-hydrator/1.jpg",
+    "/products/clinique-moisture-surge-intense-72h-lipid-replenishing-hydrator/2.png"
+  ],
+  "clinique-take-the-day-off-cleansing-balm": [
+    "/products/clinique-take-the-day-off-cleansing-balm/1.jpg",
+    "/products/clinique-take-the-day-off-cleansing-balm/2.png"
+  ],
+  "lancome-genifique-advanced-youth-activating-concentrate": [
+    "/products/lancome-genifique-advanced-youth-activating-concentrate/1.jpg",
+    "/products/lancome-genifique-advanced-youth-activating-concentrate/2.png"
+  ],
+  "estee-lauder-take-it-away-makeup-remover-lotion": [
+    "/products/estee-lauder-take-it-away-makeup-remover-lotion/1.jpg",
+    "/products/estee-lauder-take-it-away-makeup-remover-lotion/2.png"
+  ],
+  "estee-lauder-daywear-anti-oxidant-72h-hydration-sorbet-creme-spf-15": [
+    "/products/estee-lauder-daywear-anti-oxidant-72h-hydration-sorbet-creme-spf-15/1.jpg",
+    "/products/estee-lauder-daywear-anti-oxidant-72h-hydration-sorbet-creme-spf-15/2.png"
+  ],
+  "clarins-body-smoothing-moisture-milk-with-aloe-vera": [
+    "/products/clarins-body-smoothing-moisture-milk-with-aloe-vera/1.jpg",
+    "/products/clarins-body-smoothing-moisture-milk-with-aloe-vera/2.png"
+  ],
+  "clarins-men-anti-perspirant-roll-on": [
+    "/products/clarins-men-anti-perspirant-roll-on/1.jpg",
+    "/products/clarins-men-anti-perspirant-roll-on/2.png"
+  ],
+  "elemis-pro-collagen-cleansing-balm": [
+    "/products/elemis-pro-collagen-cleansing-balm/1.jpg",
+    "/products/elemis-pro-collagen-cleansing-balm/2.png"
+  ],
+  "obagi-professional-c-serum-20": [
+    "/products/obagi-professional-c-serum-20/1.jpg"
+  ],
+  "obagi-nu-derm-clear-fx-skin-brightening-cream": [
+    "/products/obagi-nu-derm-clear-fx-skin-brightening-cream/1.jpg",
+    "/products/obagi-nu-derm-clear-fx-skin-brightening-cream/2.png"
+  ],
+  "clinique-all-about-eyes": [
+    "/products/clinique-all-about-eyes/1.jpg"
+  ],
+  "clinique-take-the-day-off-make-up-remover": [
+    "/products/clinique-take-the-day-off-make-up-remover/1.jpg"
+  ],
+  "clinique-skin-supplies-for-men-anti-age-moisturizer": [
+    "/products/clinique-skin-supplies-for-men-anti-age-moisturizer/1.jpg",
+    "/products/clinique-skin-supplies-for-men-anti-age-moisturizer/2.png"
+  ],
+  "estee-lauder-revitalizing-supreme-night-intensive-restorative-creme": [
+    "/products/estee-lauder-revitalizing-supreme-night-intensive-restorative-creme/1.jpg"
+  ],
+  "elizabeth-arden-good-night-sleep-restoring-cream": [
+    "/products/elizabeth-arden-good-night-sleep-restoring-cream/1.jpg",
+    "/products/elizabeth-arden-good-night-sleep-restoring-cream/2.png"
+  ],
+  "biotherm-homme-day-control-48-hours-deodorant-roll-on-anti-transpirant": [
+    "/products/biotherm-homme-day-control-48-hours-deodorant-roll-on-anti-transpirant/1.jpg",
+    "/products/biotherm-homme-day-control-48-hours-deodorant-roll-on-anti-transpirant/2.png"
+  ],
+  "elizabeth-arden-green-tea-refreshing-body-lotion": [
+    "/products/elizabeth-arden-green-tea-refreshing-body-lotion/1.jpg",
+    "/products/elizabeth-arden-green-tea-refreshing-body-lotion/2.png"
+  ],
+  "elizabeth-arden-flawless-finish-sponge-on-cream-makeup": [
+    "/products/elizabeth-arden-flawless-finish-sponge-on-cream-makeup/1.jpg"
+  ],
+  "estee-lauder-double-wear-zero-smudge-lengthening-mascara": [
+    "/products/estee-lauder-double-wear-zero-smudge-lengthening-mascara/1.jpg"
+  ],
+  "lancome-definicils": [
+    "/products/lancome-definicils/1.jpg",
+    "/products/lancome-definicils/2.png"
+  ],
+  "grande-cosmetics-grandelash-md": [
+    "/products/grande-cosmetics-grandelash-md/1.jpg",
+    "/products/grande-cosmetics-grandelash-md/2.png"
+  ],
+  "mac-studio-fix-powder-plus-foundation": [
+    "/products/mac-studio-fix-powder-plus-foundation/1.jpg",
+    "/products/mac-studio-fix-powder-plus-foundation/2.png"
+  ],
+  "mac-lipstick": [
+    "/products/mac-lipstick/1.jpg"
+  ],
+  "lancome-hypnose-drama-instant-full-body-volume-mascara": [
+    "/products/lancome-hypnose-drama-instant-full-body-volume-mascara/1.jpg"
+  ],
+  "mac-small-eye-shadow": [
+    "/products/mac-small-eye-shadow/1.jpg",
+    "/products/mac-small-eye-shadow/2.png"
+  ],
+  "sisley-l-orchidee-highlighter-blush-with-white-lily": [
+    "/products/sisley-l-orchidee-highlighter-blush-with-white-lily/1.jpg",
+    "/products/sisley-l-orchidee-highlighter-blush-with-white-lily/2.png"
+  ],
+  "clinique-high-impact-mascara": [
+    "/products/clinique-high-impact-mascara/1.jpg"
+  ],
+  "christian-dior-dior-addict-lip-glow-oil": [
+    "/products/christian-dior-dior-addict-lip-glow-oil/1.jpg",
+    "/products/christian-dior-dior-addict-lip-glow-oil/2.png"
+  ],
+  "guerlain-meteorites-pearls-of-powder": [
+    "/products/guerlain-meteorites-pearls-of-powder/1.jpg",
+    "/products/guerlain-meteorites-pearls-of-powder/2.png"
+  ],
+  "guerlain-kisskiss-bee-glow-lip-balm": [
+    "/products/guerlain-kisskiss-bee-glow-lip-balm/1.jpg"
+  ],
+  "mac-lip-glass": [
+    "/products/mac-lip-glass/1.jpg",
+    "/products/mac-lip-glass/2.png"
+  ],
+  "bareminerals-original-spf-15-foundation": [
+    "/products/bareminerals-original-spf-15-foundation/1.jpg",
+    "/products/bareminerals-original-spf-15-foundation/2.png"
+  ],
+  "estee-lauder-double-wear-24h-waterproof-gel-eye-pencil": [
+    "/products/estee-lauder-double-wear-24h-waterproof-gel-eye-pencil/1.jpg"
+  ],
+  "clinique-quickliner-for-eyes": [
+    "/products/clinique-quickliner-for-eyes/1.jpg"
+  ],
+  "lancome-dual-finish-versatile-powder-makeup": [
+    "/products/lancome-dual-finish-versatile-powder-makeup/1.jpg",
+    "/products/lancome-dual-finish-versatile-powder-makeup/2.png"
+  ],
+  "clinique-superbalanced-makeup": [
+    "/products/clinique-superbalanced-makeup/1.jpg",
+    "/products/clinique-superbalanced-makeup/2.png"
+  ],
+  "clinique-blushing-blush-powder-blush": [
+    "/products/clinique-blushing-blush-powder-blush/1.jpg"
+  ],
+  "clinique-beyond-perfecting-powder-foundation-corrector": [
+    "/products/clinique-beyond-perfecting-powder-foundation-corrector/1.jpg"
+  ],
+  "mac-mineralize-skinfinish-natural": [
+    "/products/mac-mineralize-skinfinish-natural/1.jpg",
+    "/products/mac-mineralize-skinfinish-natural/2.png"
+  ],
+  "bareminerals-original-mineral-veil-illuminating-loose-setting-powder": [
+    "/products/bareminerals-original-mineral-veil-illuminating-loose-setting-powder/1.jpg"
+  ],
+  "mac-veluxe-brow-liner": [
+    "/products/mac-veluxe-brow-liner/1.jpg",
+    "/products/mac-veluxe-brow-liner/2.png"
+  ],
+  "christian-dior-dior-addict-lip-glow-reviving-lip-balm": [
+    "/products/christian-dior-dior-addict-lip-glow-reviving-lip-balm/1.jpg",
+    "/products/christian-dior-dior-addict-lip-glow-reviving-lip-balm/2.png"
+  ],
+  "elizabeth-arden-lip-color-lipstick": [
+    "/products/elizabeth-arden-lip-color-lipstick/1.jpg",
+    "/products/elizabeth-arden-lip-color-lipstick/2.png"
+  ],
+  "christian-dior-diorshow-mascara-waterproof": [
+    "/products/christian-dior-diorshow-mascara-waterproof/1.jpg"
+  ],
+  "lancome-le-crayon-khol": [
+    "/products/lancome-le-crayon-khol/1.jpg"
+  ],
+  "sisley-phyto-teint-ultra-eclat": [
+    "/products/sisley-phyto-teint-ultra-eclat/1.jpg",
+    "/products/sisley-phyto-teint-ultra-eclat/2.png"
+  ],
+  "lancome-l-absolu-rouge-drama-matte-lipstick": [
+    "/products/lancome-l-absolu-rouge-drama-matte-lipstick/1.jpg"
+  ],
+  "lancome-hypnose": [
+    "/products/lancome-hypnose/1.jpg",
+    "/products/lancome-hypnose/2.png"
+  ],
+  "estee-lauder-futurist-soft-touch-brightening-skincealer-concealer": [
+    "/products/estee-lauder-futurist-soft-touch-brightening-skincealer-concealer/1.jpg"
+  ],
+  "clinique-dramatically-different-lipstick-shaping-lip-colour": [
+    "/products/clinique-dramatically-different-lipstick-shaping-lip-colour/1.jpg"
+  ],
+  "clinique-anti-blemish-solutions-liquid-makeup": [
+    "/products/clinique-anti-blemish-solutions-liquid-makeup/1.jpg"
+  ],
+  "clinique-chubby-stick-moisturizing-lip-colour-balm": [
+    "/products/clinique-chubby-stick-moisturizing-lip-colour-balm/1.jpg"
+  ],
+  "clinique-cream-shaper-for-eyes": [
+    "/products/clinique-cream-shaper-for-eyes/1.jpg"
+  ],
+  "mac-studio-radiance-face-and-body-radiant-sheer-foundation": [
+    "/products/mac-studio-radiance-face-and-body-radiant-sheer-foundation/1.jpg",
+    "/products/mac-studio-radiance-face-and-body-radiant-sheer-foundation/2.png"
+  ],
+  "mac-pro-longwear-concealer": [
+    "/products/mac-pro-longwear-concealer/1.jpg",
+    "/products/mac-pro-longwear-concealer/2.png"
+  ],
+  "mac-studio-fix-24-hour-smooth-wear-concealer": [
+    "/products/mac-studio-fix-24-hour-smooth-wear-concealer/1.jpg",
+    "/products/mac-studio-fix-24-hour-smooth-wear-concealer/2.png"
+  ],
+  "christian-dior-addict-lip-maximizer-gloss": [
+    "/products/christian-dior-addict-lip-maximizer-gloss/1.jpg",
+    "/products/christian-dior-addict-lip-maximizer-gloss/2.png"
+  ],
+  "it-s-a-10-miracle-leave-in-product": [
+    "/products/it-s-a-10-miracle-leave-in-product/1.jpg",
+    "/products/it-s-a-10-miracle-leave-in-product/2.png"
+  ],
+  "olaplex-4-bond-maintenance-shampoo": [
+    "/products/olaplex-4-bond-maintenance-shampoo/1.jpg",
+    "/products/olaplex-4-bond-maintenance-shampoo/2.png"
+  ],
+  "kenra-platinum-blow-dry-spray": [
+    "/products/kenra-platinum-blow-dry-spray/1.jpg",
+    "/products/kenra-platinum-blow-dry-spray/2.png"
+  ],
+  "k18-leave-in-molecular-repair-hair-mask": [
+    "/products/k18-leave-in-molecular-repair-hair-mask/1.jpg",
+    "/products/k18-leave-in-molecular-repair-hair-mask/2.png"
+  ],
+  "sebastian-shaper-plus-extra-hold-hairspray": [
+    "/products/sebastian-shaper-plus-extra-hold-hairspray/1.jpg",
+    "/products/sebastian-shaper-plus-extra-hold-hairspray/2.png"
+  ],
+  "k18-professional-molecular-repair-hair-mask": [
+    "/products/k18-professional-molecular-repair-hair-mask/1.jpg",
+    "/products/k18-professional-molecular-repair-hair-mask/2.png"
+  ],
+  "olaplex-7-bonding-oil": [
+    "/products/olaplex-7-bonding-oil/1.jpg",
+    "/products/olaplex-7-bonding-oil/2.png"
+  ],
+  "sexy-hair-concepts-style-sexy-hair-hard-up-holding-gel": [
+    "/products/sexy-hair-concepts-style-sexy-hair-hard-up-holding-gel/1.jpg",
+    "/products/sexy-hair-concepts-style-sexy-hair-hard-up-holding-gel/2.png"
+  ],
+  "kenra-volume-spray-number-25-aerosol-super-hold-finishing-spray": [
+    "/products/kenra-volume-spray-number-25-aerosol-super-hold-finishing-spray/1.jpg",
+    "/products/kenra-volume-spray-number-25-aerosol-super-hold-finishing-spray/2.png"
+  ],
+  "olaplex-6-bond-smoother": [
+    "/products/olaplex-6-bond-smoother/1.jpg",
+    "/products/olaplex-6-bond-smoother/2.png"
+  ],
+  "kenra-thermal-styling-spray-19-firm-hold-heat-activated-styling-spray": [
+    "/products/kenra-thermal-styling-spray-19-firm-hold-heat-activated-styling-spray/1.jpg",
+    "/products/kenra-thermal-styling-spray-19-firm-hold-heat-activated-styling-spray/2.png"
+  ],
+  "joico-joimist-firm-finishing-spray": [
+    "/products/joico-joimist-firm-finishing-spray/1.jpg",
+    "/products/joico-joimist-firm-finishing-spray/2.png"
+  ],
+  "sexy-hair-concepts-style-sexy-hair-play-dirty-texturizing-hairspray": [
+    "/products/sexy-hair-concepts-style-sexy-hair-play-dirty-texturizing-hairspray/1.jpg",
+    "/products/sexy-hair-concepts-style-sexy-hair-play-dirty-texturizing-hairspray/2.png"
+  ],
+  "bio-ionic-long-barrel-styler-1-25": [
+    "/products/bio-ionic-long-barrel-styler-1-25/1.jpg",
+    "/products/bio-ionic-long-barrel-styler-1-25/2.png"
+  ],
+  "sexy-hair-concepts-big-sexy-hair-spray-and-play-volumizing-hair-spray": [
+    "/products/sexy-hair-concepts-big-sexy-hair-spray-and-play-volumizing-hair-spray/1.jpg",
+    "/products/sexy-hair-concepts-big-sexy-hair-spray-and-play-volumizing-hair-spray/2.png"
+  ],
+  "sexy-hair-concepts-big-sexy-hair-root-pump-plus": [
+    "/products/sexy-hair-concepts-big-sexy-hair-root-pump-plus/1.jpg",
+    "/products/sexy-hair-concepts-big-sexy-hair-root-pump-plus/2.png"
+  ],
+  "kenra-perfect-medium-spray-13-medium-hold-for-moveable-touchable-styli": [
+    "/products/kenra-perfect-medium-spray-13-medium-hold-for-moveable-touchable-styli/1.jpg",
+    "/products/kenra-perfect-medium-spray-13-medium-hold-for-moveable-touchable-styli/2.png"
+  ],
+  "olaplex-5-bond-maintenance-conditioner": [
+    "/products/olaplex-5-bond-maintenance-conditioner/1.jpg",
+    "/products/olaplex-5-bond-maintenance-conditioner/2.png"
+  ],
+  "bio-ionic-long-barrel-styler-curling-iron-1": [
+    "/products/bio-ionic-long-barrel-styler-curling-iron-1/1.jpg",
+    "/products/bio-ionic-long-barrel-styler-curling-iron-1/2.png"
+  ],
+  "sexy-hair-concepts-style-sexy-hair-hard-up-holding-gel-unisex": [
+    "/products/sexy-hair-concepts-style-sexy-hair-hard-up-holding-gel-unisex/1.jpg",
+    "/products/sexy-hair-concepts-style-sexy-hair-hard-up-holding-gel-unisex/2.png"
+  ],
+  "matrix-colorlast-shampoo": [
+    "/products/matrix-colorlast-shampoo/1.jpg",
+    "/products/matrix-colorlast-shampoo/2.png"
+  ],
+  "revlon-jean-nate-after-bath-splash": [
+    "/products/revlon-jean-nate-after-bath-splash/1.jpg",
+    "/products/revlon-jean-nate-after-bath-splash/2.png"
+  ],
+  "elizabeth-arden-blue-grass-deodorant": [
+    "/products/elizabeth-arden-blue-grass-deodorant/1.jpg",
+    "/products/elizabeth-arden-blue-grass-deodorant/2.png"
+  ],
+  "calvin-klein-euphoria-body-lotion": [
+    "/products/calvin-klein-euphoria-body-lotion/1.jpg",
+    "/products/calvin-klein-euphoria-body-lotion/2.png"
+  ],
+  "elizabeth-arden-red-door-body-lotion": [
+    "/products/elizabeth-arden-red-door-body-lotion/1.jpg",
+    "/products/elizabeth-arden-red-door-body-lotion/2.png"
+  ],
+  "elizabeth-arden-green-tea-body-cream": [
+    "/products/elizabeth-arden-green-tea-body-cream/1.jpg",
+    "/products/elizabeth-arden-green-tea-body-cream/2.png"
+  ],
+  "calvin-klein-ck-one-body-lotion": [
+    "/products/calvin-klein-ck-one-body-lotion/1.jpg",
+    "/products/calvin-klein-ck-one-body-lotion/2.png"
+  ],
+  "calvin-klein-eternity-body-lotion": [
+    "/products/calvin-klein-eternity-body-lotion/1.jpg",
+    "/products/calvin-klein-eternity-body-lotion/2.png"
+  ],
+  "calvin-klein-obsession-body-spray": [
+    "/products/calvin-klein-obsession-body-spray/1.jpg",
+    "/products/calvin-klein-obsession-body-spray/2.png"
+  ],
+  "calvin-klein-eternity-deodorant": [
+    "/products/calvin-klein-eternity-deodorant/1.jpg",
+    "/products/calvin-klein-eternity-deodorant/2.png"
+  ],
+  "parfums-de-marly-delina-body-cream": [
+    "/products/parfums-de-marly-delina-body-cream/1.jpg"
+  ],
+  "giorgio-armani-acqua-di-gio-deodorant": [
+    "/products/giorgio-armani-acqua-di-gio-deodorant/1.jpg",
+    "/products/giorgio-armani-acqua-di-gio-deodorant/2.png"
+  ],
+  "elizabeth-arden-green-tea-body-mist": [
+    "/products/elizabeth-arden-green-tea-body-mist/1.jpg"
+  ],
+  "armaf-club-de-nuit-intense-body-spray": [
+    "/products/armaf-club-de-nuit-intense-body-spray/1.jpg",
+    "/products/armaf-club-de-nuit-intense-body-spray/2.png"
+  ],
+  "clarins-moisture-rich-body-lotion-for-dry-skin": [
+    "/products/clarins-moisture-rich-body-lotion-for-dry-skin/1.jpg",
+    "/products/clarins-moisture-rich-body-lotion-for-dry-skin/2.png"
+  ],
+  "clarins-roll-on-deodorant-anti-perspirant-alcohol-free": [
+    "/products/clarins-roll-on-deodorant-anti-perspirant-alcohol-free/1.jpg",
+    "/products/clarins-roll-on-deodorant-anti-perspirant-alcohol-free/2.png"
+  ],
+  "hugo-deodorant": [
+    "/products/hugo-deodorant/1.jpg",
+    "/products/hugo-deodorant/2.png"
+  ],
+  "parfums-de-marly-valaya-body-cream": [
+    "/products/parfums-de-marly-valaya-body-cream/1.jpg"
+  ],
+  "lancome-bocage-gentle-caress-deodorant-roll-on": [
+    "/products/lancome-bocage-gentle-caress-deodorant-roll-on/1.jpg",
+    "/products/lancome-bocage-gentle-caress-deodorant-roll-on/2.png"
+  ]
+}
