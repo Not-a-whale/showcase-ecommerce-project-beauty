@@ -12,7 +12,8 @@
     "payment:migration:run": "node --require @swc-node/register --require tsconfig-paths/register node_modules/typeorm/cli.js migration:run -d apps/payment/src/data-source.ts",
     "payment:migration:revert": "node --require @swc-node/register --require tsconfig-paths/register node_modules/typeorm/cli.js migration:revert -d apps/payment/src/data-source.ts",
     "payment:migration:show": "node --require @swc-node/register --require tsconfig-paths/register node_modules/typeorm/cli.js migration:show -d apps/payment/src/data-source.ts",
-    "dev:all": "concurrently -k -n api,payment,web -c blue,magenta,green \"nx serve api\" \"nx serve @ecommerce/payment\" \"nx dev @ecommerce/web --port 3100\""
+    "dev:all": "concurrently -k -n api,payment,web -c blue,magenta,green \"nx serve api\" \"nx serve @ecommerce/payment\" \"nx dev @ecommerce/web --port 3100\"",
+    "seed:products": "node tools/scripts/seed-products.mjs"
   },
   "private": true,
   "devDependencies": {
