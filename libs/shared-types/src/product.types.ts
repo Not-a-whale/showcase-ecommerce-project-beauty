@@ -9,6 +9,7 @@ export interface Product {
   effectivePrice: number; // computed: salePrice if active sale, else price
   stock: number;
   imageUrl: string | null;
+  images: string[];
   purchaseCount: number;
   categoryId: string;
   category?: Category;
@@ -31,6 +32,8 @@ export type SortType =
 
 export interface ProductsQuery {
   categoryId?: string;
+  category?: string;
+  sale?: boolean;
   sort?: SortType;
   search?: string;
   cursor?: string;

@@ -2,6 +2,7 @@ import { useEffect } from 'react';
 import { create } from 'zustand';
 
 import type { AuthResponse, AuthUser } from '@/features/auth/model/types';
+import { setAuthHint } from './auth-hint';
 
 export enum AuthStatus {
   Idle = 'idle',
@@ -21,10 +22,14 @@ export const useAuthStore = create<AuthState>()((set) => ({
   user: null,
   accessToken: null,
   status: AuthStatus.Idle,
-  setAuth: (user, token) =>
-    set({ user, accessToken: token, status: AuthStatus.Authenticated }),
-  clear: () =>
-    set({ user: null, accessToken: null, status: AuthStatus.Unauthenticated }),
+  setAuth: (user, token) => {
+    setAuthHint(true);
+    set({ user, accessToken: token, status: AuthStatus.Authenticated });
+  },
+  clear: () => {
+    setAuthHint(false);
+    set({ user: null, accessToken: null, status: AuthStatus.Unauthenticated });
+  },
 }));
 
 export const useUser = (authResponse: AuthResponse) => {

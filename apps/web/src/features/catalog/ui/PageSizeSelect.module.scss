@@ -1,0 +1,14 @@
+.panel {
+  display: flex;
+  justify-content: flex-end;
+  padding: 24px 72px 40px;
+
+  @media (max-width: 1024px) {
+    padding: 20px 8.5vw 40px;
+  }
+}
+
+.dropdown {
+  inline-size: 80px;
+  min-inline-size: 80px;
+}

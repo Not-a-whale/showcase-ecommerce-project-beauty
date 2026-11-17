@@ -1,5 +1,6 @@
+import { join } from 'path';
 import { Order } from './app/orders/entities/order.entity';
-import { DataSourceOptions } from 'typeorm';
+import { DataSource, DataSourceOptions } from 'typeorm';
 import { User } from './app/auth/entities/user.entity';
 import { Product } from './app/products/entities/product.entity';
 import { Category } from './app/products/entities/category.entity';
@@ -27,6 +28,9 @@ export const dataSourceOptions: DataSourceOptions = {
     Notification,
     Wishlist,
   ],
+  migrations: [join(__dirname, 'migrations', '*.{ts,js}')],
   synchronize: false, // schema is managed exclusively via migrations — run: npm run migration:run
   logging: true,
 };
+
+export const AppDataSource = new DataSource(dataSourceOptions);

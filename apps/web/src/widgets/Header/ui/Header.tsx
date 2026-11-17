@@ -1,13 +1,22 @@
 'use client';
 
-import { useEffect, useRef, useState } from 'react';
+import { useCallback, useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import {
+  AuthStatus,
   useAuthStore,
   useIsAuthenticated,
 } from '@/features/auth/model/auth.store';
+import { logout } from '@/features/auth/api/auth.api';
+import { AnimatePresence, m } from 'framer-motion';
+import { dropdownMotion } from '@/shared/lib/motion';
+import { Skeleton } from '@/shared/ui/Skeleton/Skeleton';
+import { CrossIcon } from '@/shared/ui/icons/CrossIcon';
+import { useCartCount } from '@/entities/cart/model/cart.store';
+import { useFlyToCartStore } from '@/features/cart/model/fly-to-cart.store';
+import { SearchOverlay } from '@/features/search/ui/SearchOverlay';
 import { ThemeToggle } from '@/shared/ui/ThemeToggle';
 import { PersonIcon } from '@/shared/ui/icons/PersonIcon';
 import styles from './Header.module.scss';
@@ -18,40 +27,67 @@ const MENU: MenuNode[] = [
   { label: 'Home', href: '/' },
   {
     label: 'Shop beauty',
+    href: '/collection',
     children: [
       {
         label: 'Shop by type',
+        href: '/collection',
         children: [
-          { label: 'Shop all', href: '/' },
-          { label: 'Skin care', href: '/' },
-          { label: 'Make up', href: '/' },
-          { label: 'Hair care', href: '/' },
+          { label: 'Shop all', href: '/collection' },
+          { label: 'Skin care', href: '/collection?category=skin-care' },
+          { label: 'Make up', href: '/collection?category=make-up' },
+          { label: 'Hair care', href: '/collection?category=hair-care' },
+          { label: 'Fragrance', href: '/collection?category=fragrance' },
+          { label: 'Body care', href: '/collection?category=body-care' },
         ],
       },
       {
         label: 'Shop the edit',
+        href: '/collection?sort=popular',
         children: [
-          { label: 'Home beauty essentials', href: '/' },
-          { label: 'Skincare Super Sellers', href: '/' },
+          { label: 'Home beauty essentials', href: '/collection?category=body-care&sort=popular' },
+          { label: 'Skincare super sellers', href: '/collection?category=skin-care&sort=popular' },
         ],
       },
       {
         label: 'Sale',
+        href: '/collection?sale=1',
         children: [
-          { label: 'Final Reductions', href: '/' },
-          { label: 'Fragrance sale', href: '/' },
+          { label: 'Final reductions', href: '/collection?sale=1&sort=price_asc' },
+          { label: 'Fragrance sale', href: '/collection?category=fragrance&sale=1' },
         ],
       },
-      { label: 'Our pics', href: '/' },
-      { label: 'Gift cards', href: '/' },
+      { label: 'Our picks', href: '/collection?sort=popular' },
+      { label: 'Gift cards', href: '/gift-cards' },
     ],
   },
-  { label: 'Blog', href: '/' },
-  { label: 'About us', href: '/' },
-  { label: 'Theme features', href: '/' },
+  { label: 'Blog', href: '/blog' },
+  { label: 'About us', href: '/about' },
+  { label: 'Sale', href: '/collection?sale=1' },
 ];
 
-const CART_COUNT_PLACEHOLDER = 2;
+const EASE = [0.22, 1, 0.36, 1] as const;
+const COMPACT_COLLAPSE_AT = 84;
+const COMPACT_EXPAND_AT = 56;
+const headerLayout = { layout: 'position' as const, transition: { duration: 0.35, ease: EASE } };
+
+const megaMenu = {
+  panel: {
+    hidden: { opacity: 0, transition: { duration: 0.15, when: 'afterChildren' as const } },
+    visible: {
+      opacity: 1,
+      transition: { duration: 0.15, ease: EASE, when: 'beforeChildren' as const, delayChildren: 0.12, staggerChildren: 0.03 },
+    },
+  },
+  divider: {
+    hidden: { scaleY: 0, transition: { duration: 0.15 } },
+    visible: { scaleY: 1, transition: { duration: 0.4, ease: EASE, delay: 0 } },
+  },
+  item: {
+    hidden: { opacity: 0, y: -14, transition: { duration: 0.1 } },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.3, ease: EASE } },
+  },
+};
 
 function Chevron({ className }: { className?: string }) {
   return (
@@ -65,14 +101,6 @@ function BurgerIcon() {
   return (
     <svg width="30" height="22" viewBox="0 0 30 22" fill="none" aria-hidden>
       <path d="M1 1h28M1 11h28M1 21h28" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
-    </svg>
-  );
-}
-
-function CrossIcon() {
-  return (
-    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden>
-      <path d="M2 2l16 16M18 2L2 18" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
     </svg>
   );
 }
@@ -110,30 +138,64 @@ function AccountMenu({ onLogout }: { onLogout: () => void }) {
         <PersonIcon className="h-5 w-5" />
         <Image src="/arrow_down.svg" alt="" width={10} height={6} />
       </button>
-      {open && (
-        <div className={styles.accountMenu} role="menu">
-          <Link href="/profile" role="menuitem" className={styles.accountItem} onClick={() => setOpen(false)}>
-            Profile
-          </Link>
-          <button
-            type="button"
-            role="menuitem"
-            className={styles.accountItem}
-            onClick={() => {
-              setOpen(false);
-              onLogout();
-            }}
-          >
-            Logout
-          </button>
-        </div>
-      )}
+      <AnimatePresence>
+        {open && (
+          <m.div className={styles.accountMenu} role="menu" {...dropdownMotion()}>
+            <Link href="/profile" role="menuitem" className={styles.accountItem} onClick={() => setOpen(false)}>
+              Profile
+            </Link>
+            <button
+              type="button"
+              role="menuitem"
+              className={styles.accountItem}
+              onClick={() => {
+                setOpen(false);
+                onLogout();
+              }}
+            >
+              Logout
+            </button>
+          </m.div>
+        )}
+      </AnimatePresence>
     </div>
+  );
+}
+
+function CartButton() {
+  const count = useCartCount();
+  const setTarget = useFlyToCartStore((s) => s.setTarget);
+  const ref = useRef<HTMLButtonElement>(null);
+
+  useEffect(() => {
+    setTarget(ref.current);
+    return () => setTarget(null);
+  }, [setTarget]);
+
+  return (
+    <button type="button" className={styles.cart} aria-label="Cart" ref={ref}>
+      <Image src="/shopping_cart_icon.svg" alt="" width={22} height={20} />
+      <AnimatePresence>
+        {count > 0 && (
+          <m.span
+            key={count}
+            className={styles.cartNum}
+            initial={{ scale: 0.4, opacity: 0 }}
+            animate={{ scale: [1.5, 1], opacity: 1 }}
+            exit={{ scale: 0.4, opacity: 0 }}
+            transition={{ duration: 0.35, ease: EASE }}
+          >
+            {count}
+          </m.span>
+        )}
+      </AnimatePresence>
+    </button>
   );
 }
 
 export function Header() {
   const isAuthenticated = useIsAuthenticated();
+  const status = useAuthStore((state) => state.status);
   const clear = useAuthStore((state) => state.clear);
   const router = useRouter();
 
@@ -141,6 +203,31 @@ export function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [menuPath, setMenuPath] = useState<number[]>([]);
   const [searchOpen, setSearchOpen] = useState(false);
+  const [compact, setCompact] = useState(false);
+
+  useEffect(() => {
+    const desktop = window.matchMedia('(min-width: 1025px)');
+    let raf = 0;
+    const update = () => {
+      raf = 0;
+      const y = window.scrollY;
+      setCompact((prev) => {
+        if (!desktop.matches) return false;
+        return prev ? y > COMPACT_EXPAND_AT : y > COMPACT_COLLAPSE_AT;
+      });
+    };
+    const onScroll = () => {
+      if (!raf) raf = requestAnimationFrame(update);
+    };
+    update();
+    window.addEventListener('scroll', onScroll, { passive: true });
+    desktop.addEventListener('change', update);
+    return () => {
+      window.removeEventListener('scroll', onScroll);
+      desktop.removeEventListener('change', update);
+      if (raf) cancelAnimationFrame(raf);
+    };
+  }, []);
 
   useEffect(() => {
     document.body.style.overflow = menuOpen || searchOpen ? 'hidden' : '';
@@ -154,10 +241,16 @@ export function Header() {
     setMenuPath([]);
   };
 
-  const handleLogout = () => {
-    clear();
-    closeMenu();
-    router.push('/');
+  const closeSearch = useCallback(() => setSearchOpen(false), []);
+
+  const handleLogout = async () => {
+    try {
+      await logout();
+    } finally {
+      clear();
+      closeMenu();
+      router.push('/');
+    }
   };
 
   const shop = MENU[1];
@@ -170,9 +263,7 @@ export function Header() {
   );
   const currentList = currentNode ? currentNode.children! : MENU;
 
-  const logging = isAuthenticated ? (
-    <AccountMenu onLogout={handleLogout} />
-  ) : (
+  const guestLinks = (
     <>
       <Link href="/login" className={styles.loginLink} onClick={closeMenu}>
         Login
@@ -183,6 +274,21 @@ export function Header() {
       </Link>
     </>
   );
+
+  const logging =
+    status === AuthStatus.Idle ? (
+      <>
+        <span className={styles.idleAccount}>
+          <Skeleton circle width={20} height={20} />
+          <Skeleton width={10} height={6} />
+        </span>
+        <span className={styles.idleGuest}>{guestLinks}</span>
+      </>
+    ) : isAuthenticated ? (
+      <AccountMenu onLogout={handleLogout} />
+    ) : (
+      guestLinks
+    );
 
   const flag = (
     <>
@@ -211,46 +317,38 @@ export function Header() {
   );
 
   return (
-    <header className={styles.root}>
+    <header
+      className={compact ? `${styles.root} ${styles.compact}` : styles.root}
+      data-compact={compact || undefined}
+      onMouseLeave={() => setShopOpen(false)}
+    >
       <div className={styles.top}>
         {trigger(styles.triggerTop)}
 
-        <div className={styles.left}>
+        <m.div className={styles.left} {...headerLayout}>
           {currency}
-          <button type="button" className={styles.search} aria-label="Search" onClick={() => setSearchOpen(true)}>
+          <m.button
+            type="button"
+            className={styles.search}
+            aria-label="Search"
+            onClick={() => setSearchOpen(true)}
+            {...headerLayout}
+          >
             <Image src="/search_icon.svg" alt="" width={21} height={21} />
-          </button>
-          <div className={styles.themeSlot}>
+          </m.button>
+          <m.div className={styles.themeSlot} {...headerLayout}>
             <ThemeToggle />
-          </div>
-        </div>
+          </m.div>
+        </m.div>
 
-        <div className={styles.center}>
+        <m.div className={styles.center} {...headerLayout}>
           <Link href="/" className={styles.logo}>
             <Image src="/main_logo.png" alt="Beauty store" width={144} height={35} priority />
           </Link>
-        </div>
-
-        <div className={styles.right}>
-          <div className={styles.flag}>{flag}</div>
-          <div className={styles.group}>
-            <div className={styles.logging}>{logging}</div>
-            <button type="button" className={styles.cart} aria-label="Cart">
-              <Image src="/shopping_cart_icon.svg" alt="" width={22} height={20} />
-              {CART_COUNT_PLACEHOLDER > 0 && (
-                <span className={styles.cartNum}>{CART_COUNT_PLACEHOLDER}</span>
-              )}
-            </button>
-          </div>
-        </div>
-      </div>
-
-      <div className={styles.bottom} onMouseLeave={() => setShopOpen(false)}>
-        {trigger(styles.triggerBottom)}
-        <div className={styles.loggingMobile}>{logging}</div>
+        </m.div>
 
         <nav className={styles.nav} aria-label="Main">
-          <ul className={styles.menu}>
+          <m.ul className={styles.menu} {...headerLayout}>
             {MENU.map((item) => (
               <li
                 key={item.label}
@@ -271,23 +369,45 @@ export function Header() {
                 )}
               </li>
             ))}
-          </ul>
+          </m.ul>
         </nav>
 
+        <m.div className={styles.right} {...headerLayout}>
+          <m.div className={styles.flag} {...headerLayout}>
+            {flag}
+          </m.div>
+          <div className={styles.group}>
+            <div className={styles.logging}>{logging}</div>
+            <CartButton />
+          </div>
+        </m.div>
+      </div>
+
+      <div className={styles.bottom}>
+        {trigger(styles.triggerBottom)}
+        <div className={styles.loggingMobile}>{logging}</div>
         <div className={styles.flagMobile}>{flag}</div>
       </div>
 
-      {shopOpen && (
-        <div className={styles.dropdown} onMouseLeave={() => setShopOpen(false)}>
+      <AnimatePresence>
+        {shopOpen && (
+          <m.div
+            className={styles.dropdown}
+            variants={megaMenu.panel}
+            initial="hidden"
+            animate="visible"
+            exit="hidden"
+          >
           <nav className={styles.dropdownWrap} aria-label="Shop beauty">
             <div className={`${styles.dropdownItem} ${styles.dropdownItemPicks}`}>
               <ul className={`${styles.dropdownList} ${styles.dropdownListPicks}`}>
+                <m.span className={styles.dropdownDivider} variants={megaMenu.divider} aria-hidden />
                 {picks.map((n) => (
-                  <li key={n.label}>
-                    <Link href={n.href ?? '/'} className={styles.dropdownHeading}>
+                  <m.li key={n.label} variants={megaMenu.item}>
+                    <Link href={n.href ?? '/'} className={styles.dropdownHeading} onClick={() => setShopOpen(false)}>
                       {n.label}
                     </Link>
-                  </li>
+                  </m.li>
                 ))}
               </ul>
             </div>
@@ -296,23 +416,26 @@ export function Header() {
                 key={g.label}
                 className={`${styles.dropdownItem} ${i === 0 ? styles.dropdownItemSecond : ''}`}
               >
-                <Link href={g.href ?? '/'} className={styles.dropdownHeading}>
-                  {g.label}
-                </Link>
+                <m.div variants={megaMenu.item}>
+                  <Link href={g.href ?? '/'} className={styles.dropdownHeading} onClick={() => setShopOpen(false)}>
+                    {g.label}
+                  </Link>
+                </m.div>
                 <ul className={styles.dropdownList}>
                   {g.children!.map((n) => (
-                    <li key={n.label}>
-                      <Link href={n.href ?? '/'} className={styles.dropdownSmall}>
+                    <m.li key={n.label} variants={megaMenu.item}>
+                      <Link href={n.href ?? '/'} className={styles.dropdownSmall} onClick={() => setShopOpen(false)}>
                         {n.label}
                       </Link>
-                    </li>
+                    </m.li>
                   ))}
                 </ul>
               </div>
             ))}
           </nav>
-        </div>
-      )}
+          </m.div>
+        )}
+      </AnimatePresence>
 
       <div className={styles.searchRow}>
         <button type="button" className={styles.search} aria-label="Search" onClick={() => setSearchOpen(true)}>
@@ -395,16 +518,7 @@ export function Header() {
         </div>
       )}
 
-      {searchOpen && (
-        <div className={styles.searchScreen} role="dialog" aria-label="Search">
-          <div className={styles.searchBlock}>
-            <input type="search" className={styles.searchInput} placeholder="Search" autoFocus />
-            <button type="button" className={styles.searchClose} aria-label="Close search" onClick={() => setSearchOpen(false)}>
-              <CrossIcon />
-            </button>
-          </div>
-        </div>
-      )}
+      <SearchOverlay open={searchOpen} onClose={closeSearch} />
     </header>
   );
 }

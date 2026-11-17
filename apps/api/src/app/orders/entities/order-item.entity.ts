@@ -5,7 +5,7 @@ import {
   ManyToOne,
   JoinColumn,
 } from 'typeorm';
-import { Order } from './order.entity';
+import type { Order } from './order.entity';
 import { Product } from '../../products/entities/product.entity';
 
 @Entity('order_items')
@@ -25,7 +25,7 @@ export class OrderItem {
   @Column({ type: 'decimal', precision: 10, scale: 2 })
   priceAtOrder: number;
 
-  @ManyToOne(() => Order, (order) => order.items)
+  @ManyToOne('Order', (order: Order) => order.items)
   @JoinColumn({ name: 'orderId' })
   order: Order;
 

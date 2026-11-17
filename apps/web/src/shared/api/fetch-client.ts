@@ -1,18 +1,9 @@
 import { useAuthStore } from '@/features/auth/model/auth.store';
 import type { AuthResponse } from '@/features/auth/model/types';
+import { API_URL } from './config';
+import { ApiError } from './errors';
 
-const API_URL = process.env.NEXT_PUBLIC_API_URL ?? 'http://localhost:3000/api';
-
-export class ApiError extends Error {
-  constructor(
-    public readonly status: number,
-    message: string,
-    public readonly body?: unknown,
-  ) {
-    super(message);
-    this.name = 'ApiError';
-  }
-}
+export { ApiError } from './errors';
 
 type RequestOptions = Omit<RequestInit, 'body'> & { body?: unknown };
 
@@ -44,15 +35,16 @@ async function rawFetch<T>(
     throw new ApiError(res.status, `API ${res.status} on ${path}`, errBody);
   }
 
-  if (res.status === 204) {
+  if (res.status === 204 || res.headers.get('content-length') === '0') {
     return undefined as T;
   }
-  return (await res.json()) as T;
+  const text = await res.text();
+  return (text ? JSON.parse(text) : undefined) as T;
 }
 
 let refreshPromise: Promise<AuthResponse> | null = null;
 
-function refreshOnce(): Promise<AuthResponse> {
+export function refreshOnce(): Promise<AuthResponse> {
   if (!refreshPromise) {
     refreshPromise = rawFetch<AuthResponse>('/auth/refresh', {
       method: 'POST',
@@ -91,17 +83,15 @@ export async function apiFetch<T>(
       throw err;
     }
 
-    try {
-      const refreshed = await refreshOnce();
-      useAuthStore.getState().setAuth(refreshed.user, refreshed.accessToken);
-
-      return await rawFetch<T>(path, {
-        ...options,
-        headers: withAuthHeader(options.headers, refreshed.accessToken),
-      });
-    } catch (refreshErr) {
+    const refreshed = await refreshOnce().catch((refreshErr) => {
       useAuthStore.getState().clear();
       throw refreshErr instanceof ApiError ? refreshErr : err;
-    }
+    });
+    useAuthStore.getState().setAuth(refreshed.user, refreshed.accessToken);
+
+    return rawFetch<T>(path, {
+      ...options,
+      headers: withAuthHeader(options.headers, refreshed.accessToken),
+    });
   }
 }

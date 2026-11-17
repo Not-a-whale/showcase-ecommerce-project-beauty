@@ -10,7 +10,7 @@ import {
   Index,
 } from 'typeorm';
 import { User } from '../../auth/entities/user.entity';
-import { OrderItem } from './order-item.entity';
+import type { OrderItem } from './order-item.entity';
 import { OrderStatus } from '@ecommerce/shared-types';
 import type { ShippingAddress } from '@ecommerce/shared-types';
 
@@ -55,7 +55,7 @@ export class Order {
   @JoinColumn({ name: 'userId' })
   user: User;
 
-  @OneToMany(() => OrderItem, (item) => item.order, { cascade: true })
+  @OneToMany('OrderItem', (item: OrderItem) => item.order, { cascade: true })
   items: OrderItem[];
 
   @CreateDateColumn()

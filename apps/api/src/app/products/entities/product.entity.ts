@@ -31,6 +31,9 @@ export class Product {
   @Column({ type: 'varchar', length: 500, nullable: true })
   imageUrl: string | null;
 
+  @Column({ type: 'text', array: true, default: () => "'{}'" })
+  images: string[];
+
   @Column({ default: false })
   isDeleted: boolean;
 
@@ -40,10 +43,10 @@ export class Product {
   @Column({ type: 'decimal', precision: 10, scale: 2, nullable: true })
   salePrice: number | null;
 
-  @Column({ type: 'timestamp', nullable: true })
+  @Column({ type: 'timestamptz', nullable: true })
   saleStartsAt: Date | null;
 
-  @Column({ type: 'timestamp', nullable: true })
+  @Column({ type: 'timestamptz', nullable: true })
   saleEndsAt: Date | null;
 
   @VersionColumn()
@@ -57,10 +60,9 @@ export class Product {
   @JoinColumn({ name: 'categoryId' })
   category: Category;
 
-  @CreateDateColumn()
+  @CreateDateColumn({ type: 'timestamptz', precision: 3 })
   createdAt: Date;
 
-  @UpdateDateColumn()
+  @UpdateDateColumn({ type: 'timestamptz', precision: 3 })
   updatedAt: Date;
 }
-

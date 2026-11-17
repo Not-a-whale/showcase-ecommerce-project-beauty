@@ -55,6 +55,19 @@ export class ProductsService {
       });
     }
 
+    if (query.category) {
+      qb.innerJoin('product.category', 'category').andWhere(
+        'category.slug = :categorySlug',
+        { categorySlug: query.category },
+      );
+    }
+
+    if (query.sale) {
+      qb.andWhere('product.salePrice IS NOT NULL')
+        .andWhere('(product.saleStartsAt IS NULL OR product.saleStartsAt <= NOW())')
+        .andWhere('(product.saleEndsAt IS NULL OR product.saleEndsAt >= NOW())');
+    }
+
     if (query.search) {
       qb.andWhere(
         `product.search_vector @@ plainto_tsquery('english', :search)`,

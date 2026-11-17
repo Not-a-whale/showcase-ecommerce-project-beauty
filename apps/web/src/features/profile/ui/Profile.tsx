@@ -1,8 +1,13 @@
 'use client';
-import { useAuthStore } from '@/features/auth/model/auth.store';
+import { AuthStatus, useAuthStore } from '@/features/auth/model/auth.store';
 
 export function Profile() {
   const user = useAuthStore((state) => state.user);
+  const status = useAuthStore((state) => state.status);
+
+  if (status === AuthStatus.Idle) {
+    return null;
+  }
 
   if (!user) {
     return (

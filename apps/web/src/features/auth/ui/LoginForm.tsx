@@ -1,6 +1,6 @@
 'use client';
 import { useActionState } from 'react';
-import { useRouter } from 'next/navigation';
+import { useRouter, useSearchParams } from 'next/navigation';
 import Link from 'next/link';
 import { login } from '@/features/auth/api/auth.api';
 import { useAuthStore } from '@/features/auth/model/auth.store';
@@ -9,6 +9,7 @@ type FormState = { error: string | null };
 
 export function LoginForm() {
   const router = useRouter();
+  const redirect = useSearchParams().get('redirect');
 
   const [state, formAction, isPending] = useActionState<FormState, FormData>(
     async (_prev, formData) => {
@@ -17,7 +18,11 @@ export function LoginForm() {
       try {
         const res = await login({ email, password });
         useAuthStore.getState().setAuth(res.user, res.accessToken);
-        router.push('/');
+        const safeRedirect =
+          redirect && redirect.startsWith('/') && !redirect.startsWith('//')
+            ? redirect
+            : '/';
+        router.push(safeRedirect);
         return { error: null };
       } catch {
         return { error: 'Invalid email or password' };

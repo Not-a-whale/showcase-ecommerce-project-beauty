@@ -1,4 +1,4 @@
-import { apiFetch } from '@/shared/api/fetch-client';
+import { apiFetch, refreshOnce } from '@/shared/api/fetch-client';
 import type { LoginRequest, SignupRequest } from '@ecommerce/shared-types';
 import type { AuthResponse, AuthUser } from '../model/types';
 
@@ -14,9 +14,7 @@ export function signup(body: SignupRequest): Promise<AuthResponse> {
 }
 
 export function refresh(): Promise<AuthResponse> {
-  return apiFetch<AuthResponse>('/auth/refresh', {
-    method: 'POST',
-  });
+  return refreshOnce();
 }
 
 export function getMe(): Promise<AuthUser> {
@@ -25,11 +23,8 @@ export function getMe(): Promise<AuthUser> {
   });
 }
 
-export function logout(accessToken: string): Promise<void> {
+export function logout(): Promise<void> {
   return apiFetch<void>('/auth/logout', {
     method: 'POST',
-    headers: {
-      Authorization: `Bearer ${accessToken}`,
-    },
   });
 }

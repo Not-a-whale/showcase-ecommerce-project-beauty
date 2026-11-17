@@ -58,14 +58,17 @@ export class AuthService {
     });
 
     if (!user) {
+      response.clearCookie('refreshToken');
       throw new UnauthorizedException('User not found');
     }
 
     if (user.isBanned) {
+      response.clearCookie('refreshToken');
       throw new ForbiddenException('Account is banned');
     }
 
     if (user.tokenVersion !== payload.tokenVersion) {
+      response.clearCookie('refreshToken');
       throw new UnauthorizedException('Token has been revoked');
     }
 

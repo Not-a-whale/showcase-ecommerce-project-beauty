@@ -1,0 +1,13 @@
+.layer {
+  position: fixed;
+  inset: 0;
+  z-index: 300;
+  pointer-events: none;
+}
+
+.flyer {
+  position: absolute;
+  object-fit: cover;
+  box-shadow: 0 8px 24px rgb(0 0 0 / 15%);
+  will-change: transform, width, height, opacity;
+}

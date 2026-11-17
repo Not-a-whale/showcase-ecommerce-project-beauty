@@ -3,6 +3,7 @@ import { Roboto, Karla, Playfair_Display } from 'next/font/google';
 import { Providers } from '@/shared/providers/Providers';
 import { Header } from '@/widgets/Header/ui/Header';
 import { Footer } from '@/widgets/Footer/ui/Footer';
+import { FlyToCartLayer } from '@/features/cart/ui/FlyToCartLayer';
 
 const roboto = Roboto({
   subsets: ['latin'],
@@ -28,7 +29,7 @@ export const metadata = {
   description: 'E-commerce showcase',
 };
 
-const themeScript = `(function(){try{var s=localStorage.getItem('theme');var t=(s==='light'||s==='dark')?s:(window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');document.documentElement.setAttribute('data-theme',t);}catch(e){}})();`;
+const themeScript = `(function(){try{var s=localStorage.getItem('theme');var t=(s==='light'||s==='dark')?s:(window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');document.documentElement.setAttribute('data-theme',t);document.documentElement.setAttribute('data-auth',/(?:^|;\\s*)auth_hint=1(?:;|$)/.test(document.cookie)?'1':'0');}catch(e){}})();`;
 
 export default function RootLayout({
   children,
@@ -51,6 +52,7 @@ export default function RootLayout({
             <div className="flex-1">{children}</div>
             <Footer />
           </div>
+          <FlyToCartLayer />
         </Providers>
       </body>
     </html>

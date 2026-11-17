@@ -1,0 +1,116 @@
+.card {
+  display: flex;
+  flex-direction: column;
+}
+
+.imgContainer {
+  position: relative;
+  inline-size: 100%;
+  aspect-ratio: 1 / 1;
+  background: var(--surface-muted);
+}
+
+.media {
+  position: relative;
+  display: block;
+  inline-size: 100%;
+  block-size: 100%;
+  overflow: hidden;
+}
+
+.image {
+  object-fit: cover;
+  transition: opacity 0.35s ease;
+}
+
+.imageHover {
+  opacity: 0;
+}
+
+.media:hover .imageHover,
+.media:focus-visible .imageHover {
+  opacity: 1;
+}
+
+.placeholder {
+  position: absolute;
+  inset: 0;
+  background: var(--surface-muted);
+}
+
+.badge {
+  position: absolute;
+  inset-inline-start: 24px;
+  inset-block-start: 20px;
+  padding: 8px;
+  font-family: var(--font-accent);
+  font-size: 13px;
+  line-height: 15px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  background: var(--accent);
+  color: var(--accent-foreground);
+  pointer-events: none;
+}
+
+.add {
+  position: absolute;
+  inset-inline-end: 8px;
+  inset-block-end: 8px;
+  inline-size: 32px;
+  block-size: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: 1px solid var(--border);
+  background: var(--background);
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+  &:hover {
+    transform: scale(1.06);
+    box-shadow: 0 0 10px rgb(0 0 0 / 8%);
+  }
+}
+
+.titleLink {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+.name {
+  margin: 8px 0;
+  font-family: var(--font-accent);
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-align: center;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.price {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-accent);
+  font-size: 13px;
+  line-height: 15px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.oldPrice {
+  text-decoration: line-through;
+  color: var(--muted);
+}
+
+.currentPrice {
+  margin-inline-start: 10px;
+}

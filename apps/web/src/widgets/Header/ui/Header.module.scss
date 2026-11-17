@@ -9,6 +9,11 @@
   font-family: var(--font-sans);
   font-size: 16px;
   line-height: 24px;
+
+  @media (min-width: 1025px) {
+    position: sticky;
+    inset-block-start: -72px;
+  }
 }
 
 /* ── top row ─────────────────────────────────────────────── */
@@ -18,6 +23,56 @@
   inline-size: 100%;
   padding-block: 36px 0;
   padding-inline: 8.5%;
+  transition: padding-block-start 0.35s cubic-bezier(0.22, 1, 0.36, 1), padding-block-end 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* ── compact (scrolled) desktop state ────────────────────── */
+.compact {
+  .top {
+    align-items: center;
+    padding-block: 82px 10px;
+    padding-inline: 40px;
+  }
+
+  .center {
+    position: static;
+  }
+
+  .nav {
+    position: static;
+    inline-size: auto;
+  }
+
+  .bottom {
+    block-size: 0;
+  }
+
+  .menuItem {
+    padding-block: 9px;
+  }
+
+  .search,
+  .themeSlot {
+    margin-inline-start: 24px;
+  }
+
+  .flag {
+    margin-inline-end: 24px;
+  }
+
+  @media (max-width: 1279px) {
+    .flagTxt {
+      display: none;
+    }
+
+    .flagImg {
+      margin-inline-end: 0;
+    }
+
+    .menuItem {
+      padding-inline: 10px;
+    }
+  }
 }
 
 .left {
@@ -60,9 +115,8 @@
 
 .center {
   position: absolute;
-  inset-inline-start: 50%;
+  inset-inline-start: calc(50% - 72px);
   inset-block-start: 36px;
-  transform: translateX(-50%);
 }
 
 .logo {
@@ -141,6 +195,25 @@
   align-items: center;
 }
 
+.idleAccount {
+  display: none;
+  align-items: center;
+  gap: 6px;
+}
+
+.idleGuest {
+  display: flex;
+  align-items: center;
+}
+
+:global(html[data-auth='1']) .idleAccount {
+  display: flex;
+}
+
+:global(html[data-auth='1']) .idleGuest {
+  display: none;
+}
+
 .accountBtn {
   display: flex;
   align-items: center;
@@ -211,12 +284,19 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  block-size: 56px;
+  overflow: hidden;
+  transition: block-size 0.35s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .nav {
+  position: absolute;
+  inset-inline-start: 0;
+  inset-block-start: 78px;
   display: flex;
   align-items: center;
   justify-content: center;
+  inline-size: 100%;
 }
 
 .menu {
@@ -287,10 +367,20 @@
 }
 
 .dropdownListPicks {
+  position: relative;
   margin-block-start: 0;
   padding-inline-end: 64px;
   block-size: 140px;
-  border-inline-end: 1px solid var(--primary);
+}
+
+.dropdownDivider {
+  position: absolute;
+  inset-inline-end: 0;
+  inset-block-start: 0;
+  inline-size: 1px;
+  block-size: 100%;
+  background: var(--primary);
+  transform-origin: top center;
 }
 
 .dropdownHeading {
@@ -334,6 +424,8 @@
   }
 
   .bottom {
+    block-size: auto;
+    overflow: visible;
     justify-content: space-between;
     padding-block: 20px;
     padding-inline: 8.5%;

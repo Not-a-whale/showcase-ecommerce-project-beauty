@@ -1,0 +1,30 @@
+.searchNotice {
+  overflow: hidden;
+}
+
+.searchNoticeInner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 60px 0;
+  font-family: var(--font-sans);
+  font-size: 16px;
+  color: var(--foreground);
+
+  @media (max-width: 1024px) {
+    padding: 16px 8.5vw 0;
+  }
+}
+
+.clear {
+  border: 0;
+  background: transparent;
+  font-size: 20px;
+  line-height: 1;
+  color: var(--muted);
+  cursor: pointer;
+
+  &:hover {
+    color: var(--foreground);
+  }
+}

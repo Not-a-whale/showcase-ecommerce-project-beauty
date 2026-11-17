@@ -1,0 +1,27 @@
+.banner {
+  position: relative;
+  display: flex;
+  align-items: center;
+  inline-size: 100%;
+  block-size: 60vh;
+  min-block-size: 320px;
+  background:
+    linear-gradient(0deg, rgb(0 0 0 / 20%), rgb(0 0 0 / 20%)),
+    url('/images/collection-banner.jpg') center 30% / cover no-repeat;
+}
+
+.title {
+  position: absolute;
+  inset-block-end: 0;
+  inset-inline-start: 0;
+  max-inline-size: 400px;
+  margin: 0 0 8px;
+  padding: 32px;
+  font-family: var(--font-sans);
+  font-size: 20px;
+  line-height: 25px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  color: #ffffff;
+}

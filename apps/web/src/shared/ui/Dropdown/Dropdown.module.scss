@@ -1,0 +1,69 @@
+.root {
+  position: relative;
+  display: inline-flex;
+  min-inline-size: 80px;
+}
+
+.trigger {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  inline-size: 100%;
+  padding: 8px 15px 8px 16px;
+  border: 1px solid var(--border);
+  background: var(--background);
+  color: var(--foreground);
+  cursor: pointer;
+  text-align: start;
+}
+
+.current {
+  display: block;
+  padding: 4px 0;
+  font-family: var(--font-accent);
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.arrow {
+  flex-shrink: 0;
+  color: var(--muted);
+}
+
+.list {
+  position: absolute;
+  inset-inline-start: 0;
+  inset-block-start: calc(100% + 2px);
+  z-index: 20;
+  inline-size: 100%;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border: 1px solid var(--border);
+  background: var(--background);
+}
+
+.top .list {
+  inset-block-start: auto;
+  inset-block-end: calc(100% + 2px);
+}
+
+.option {
+  padding: 10px;
+  font-family: var(--font-accent);
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-align: center;
+  cursor: pointer;
+
+  &:hover,
+  &[aria-selected='true'] {
+    background: var(--surface);
+  }
+}

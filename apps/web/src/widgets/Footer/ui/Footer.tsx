@@ -1,7 +1,5 @@
-'use client';
 import Image from 'next/image';
 import Link from 'next/link';
-import { useIsAuthenticated } from '@/features/auth/model/auth.store';
 
 const footerHeading =
   'mb-[11px] font-sans text-[20px] font-normal uppercase leading-[25px] tracking-[0.5px] text-foreground';
@@ -32,8 +30,6 @@ const PAYMENT_ICONS = [
 ];
 
 export function Footer() {
-  const isAuthenticated = useIsAuthenticated();
-
   return (
     <footer className="bg-surface">
       <div className="px-[8.5%] pb-11 pt-9">
@@ -45,11 +41,7 @@ export function Footer() {
             </p>
 
             <div
-              className={
-                isAuthenticated
-                  ? 'mb-[38.5px] mt-[17px] flex'
-                  : 'invisible mb-[38.5px] mt-[17px] flex'
-              }
+              className="mb-[38.5px] mt-[17px] flex"
             >
               {SOCIALS.map((social) => (
                 <a
@@ -64,17 +56,13 @@ export function Footer() {
             </div>
 
             <div
-              className={
-                isAuthenticated
-                  ? 'flex h-[42px] w-[136px] items-center justify-between rounded-[2px] border border-border bg-background px-4 font-accent text-[14px] uppercase leading-[16px] tracking-[1px] text-foreground'
-                  : 'invisible flex h-[42px] w-[136px] items-center justify-between rounded-[2px] border border-border bg-background px-4 font-accent text-[14px] uppercase leading-[16px] tracking-[1px] text-foreground'
-              }
+              className="flex h-[42px] w-[136px] items-center justify-between border border-border bg-background px-4 font-sans text-[16px] text-foreground"
             >
               USD $<Image src="/arrow_down.svg" alt="" width={10} height={6} />
             </div>
           </div>
 
-          <div className={isAuthenticated ? '' : 'invisible'}>
+          <div>
             <h3 className={footerHeading}>Info</h3>
             <ul className="flex flex-col gap-2">
               {INFO_LINKS.map((link) => (
@@ -87,7 +75,7 @@ export function Footer() {
             </ul>
           </div>
 
-          <div className={isAuthenticated ? '' : 'invisible'}>
+          <div>
             <h3 className={footerHeading}>Subscribe</h3>
             <p className="mb-6 max-w-[220px] font-sans text-foreground">
               Sign up to our emails for VIP offers and new product news
@@ -96,7 +84,7 @@ export function Footer() {
               <input
                 type="email"
                 placeholder="Your email"
-                className="h-[42px] rounded-[2px] border border-border bg-background px-4 font-sans text-foreground outline-none placeholder:text-muted"
+                className="h-[42px] border border-border bg-background px-4 font-sans text-foreground outline-none placeholder:text-muted"
               />
               <button
                 type="submit"
